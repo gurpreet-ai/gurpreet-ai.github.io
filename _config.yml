@@ -20,12 +20,11 @@ minimal_theme: false         # radically minimalistic theme
 
 navigation:                  # (optional) site navigation in the header
   - index.html
-  - archive.md
   - about.md
 
 icons:                       # (optional) fontawesome icons in the header
   envelope: "mailto:"
-  github: "https://github.com"
+  github: "https://github.com/gopysingh"
   rss: "/feed.xml"
 
 comments:                    # embed disqus or isso comments
