@@ -20,7 +20,6 @@ minimal_theme: false         # radically minimalistic theme
 
 navigation:                  # (optional) site navigation in the header
   - index.html
-  - archive.md
   - about.md
 
 icons:                       # (optional) fontawesome icons in the header
