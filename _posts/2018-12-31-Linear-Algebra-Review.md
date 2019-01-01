@@ -146,7 +146,17 @@ $$
 An **m x n** matrix multiplied by an **n x o** matrix results in an **m x o** matrix. In the above example, a **3 x 2** matrix times a **2 x 2** matrix resulted in a **3 x 2** matrix.
 
 ## 5. Matrix Multiplication Properties
-This is where I talk about Matrix-Matrix Multiplication.
+- Matrices are not commutative: $$A*B \ne B*A$$
+- Matrices are associative: $$(A*B)*C = A*(B*C)$$
+- The identity matrix, when multiplied by any matrix of the same dimensions, results in the original matrix. It's just like multiplying numbers by 1. The identity matrix simply has 1's on the diagonal (upper left to lower right diagonal) and 0's elsewhere.
+
+$$
+\left( \begin{array}{ccc}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1 \\
+\end{array} \right)
+$$
 
 ## 6. Determinant, Inverse, Transpose, and Trace
 This is where I talk about Determinant, Inverse, Transpose, and Trace.
