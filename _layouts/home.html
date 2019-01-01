@@ -1,11 +1,9 @@
 ---
 layout: default
 ---
-<article class="articles">
+<article class="archive">
 	{{ content }}
-	<header>
-		<h1>Articles</h1>
-	</header>
+	<header><h1>Posts</h1></header>
 	{% for post in site.posts %}
 	{%- assign date_format = site.date_format | default: "%B %d, %Y" -%}
 	<div>
