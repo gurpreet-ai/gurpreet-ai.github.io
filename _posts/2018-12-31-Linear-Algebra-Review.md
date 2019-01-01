@@ -18,7 +18,17 @@ date:   2018-12-31 12:00:00
 - [11. Singular Value Decomposition (SVD)]()
 
 ## 1. Matrices and Vectors
-This is where I talk about matrices and vectors.
+Matrices are 2-dimensional arrays. The matrix below has four rows and three columns, so it is a 4 x 3 matrix. 
+
+$$
+M = \left( \begin{array}{ccc}
+x_{11} & x_{12} & \ldots \\
+x_{21} & x_{22} & \ldots \\
+\vdots & \vdots & \ldots \\
+\end{array} \right)
+$$
+
+A vector is a matrix with one column and many rows. The vector below is a 4 x 1 matrix.
 
 ## 2. Addition and Scalar Multiplication
 This is where I talk about Addition and Scalar Multiplication.
