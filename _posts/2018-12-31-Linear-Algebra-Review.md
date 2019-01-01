@@ -22,13 +22,23 @@ Matrices are 2-dimensional arrays. The matrix below has four rows and three colu
 
 $$
 M = \left( \begin{array}{ccc}
-x_{11} & x_{12} & \ldots \\
-x_{21} & x_{22} & \ldots \\
-\vdots & \vdots & \ldots \\
+ 4 &  9 &  8 \\
+-1 &  2 & -6 \\
+ 2 &  5 &  2 \\
+ 2 & -7 &  3 \\
 \end{array} \right)
 $$
 
 A vector is a matrix with one column and many rows. The vector below is a 4 x 1 matrix.
+
+$$
+M = \left( \begin{array}{ccc}
+ 4 \\
+-1 \\
+ 2 \\
+ 2 \\
+\end{array} \right)
+$$
 
 ## 2. Addition and Scalar Multiplication
 This is where I talk about Addition and Scalar Multiplication.
