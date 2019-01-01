@@ -41,7 +41,25 @@ M = \left( \begin{array}{ccc}
 $$
 
 ## 2. Addition and Scalar Multiplication
-This is where I talk about Addition and Scalar Multiplication.
+
+Addition and subtraction are element-wise, so you simply add or subtract each corresponding element:
+
+$$
+\left( \begin{array}{ccc}
+a & b \\
+c & d \\
+\end{array} \right)
++
+\left( \begin{array}{ccc}
+w & x \\
+y & z \\
+\end{array} \right)
+=
+\left( \begin{array}{ccc}
+a+w & b+x \\
+c+y & d+z \\
+\end{array} \right)
+$$
 
 ## 3. Matrix Vector Multiplication
 This is where I talk about Matrix Vector Multiplication.
