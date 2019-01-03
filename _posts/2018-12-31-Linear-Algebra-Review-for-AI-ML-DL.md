@@ -228,11 +228,8 @@ A norm of a vector is informally a measure of the **length** of the vector. For 
 
 $$
 l_1 = {\parallel x \parallel}_1 = \abs{x_1} + \abs{x_2} + ... + \abs{x_n} \mid
-
 l_2 = {\parallel x \parallel}_2 = \sqrt{{\abs{x_1}}^2 + {\abs{x_2}}^2 + ... {\abs{x_n}}^2}
-
 l_{\inf} = {\parallel x \parallel}_{\inf} = max \abs{x_i}, i = 1,2,..n
-
 $$
 
 All three norms presented above are examples of the family of $$l_p$$ norms, which are parameterized by a real number $$p ≥ 1$$.
