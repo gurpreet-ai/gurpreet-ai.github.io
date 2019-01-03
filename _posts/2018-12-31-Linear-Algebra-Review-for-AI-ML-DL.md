@@ -13,6 +13,7 @@ date:   2018-12-31 12:00:00
 - [6. Trace](#6-trace)
 - [7. Transpose](#7-transpose)
 - [8. Determinant](#8-determinant)
+- [9. Eigenvalues and Eigenvectors](#9-eigenvalues-eigenvectors)
 - [9. Orthogonal Matrices](#9-orthogonal-matrices)
 - [10. Symmetric Matrices](#10-symmetric-matrices)
 - [11. Inverse](#11-inverse)
@@ -208,19 +209,63 @@ b & d & f \\
 \end{array} \right)
 $$
 
-## 8. Eigenvalues and Eigenvectors
+## 8. Determinant
+Like the trace, the determinant of a matrix is only defined for square matrices. A square matrix whose determinant is zero is called a singular matrix. Otherwise, it is called a non-singular matrix.
+
+**Properties**:
+- A matrix and its transpose have the same determinant.
+- If two rows (columns) of A are interchanged its determinant changes sign but is unaltered in magnitude.
+
+
+## 9. Eigenvalues and Eigenvectors
 Eigenvectors are the **axes** (directions) along which a linear transformation acts simply by **stretching/compressing** and/or **flipping**; eigenvalues give you the factor/magnitude by which it occurs.
 
-Consider a $$N × N$$ matrix A with corresponding eigenvalue $$\lambda$$ and eigenvector $$x$$. Then we can rewrite the matrix equation $$Ax = \lambda x$$ as follows:
+Consider a $$N × N$$ matrix $$A$$ with corresponding eigenvalue $$\lambda$$ and eigenvector $$x$$. Then we can rewrite the matrix equation $$Ax = \lambda x$$ as follows:
 
-## 9. Determinant
-Like the trace, the determinant of a matrix is only defined for square matrices. A square matrix whose determinant is zero is called a singular matrix. Otherwise, it is called a non-singular matrix.
+$$
+Ax - \lambda x = 0
+$$
+$$
+Ax - \lambda I x = 0
+$$
+$$
+(Ax - \lambda I) x = 0
+$$
+
+Thus $$x$$ is an eigenvector of $$A$$ corresponding to the eigenvalue $$\lambda$$ if and only if $$x$$ and $$\lamnda$$ satisfy $$(Ax - \lambda I)x = 0$$.
+
+The equation $$(Ax - \lambda I)x = 0$$ has a nontrivial solution if and only if the determinant of $$(Ax - \lambda I)$$ is zero.
+
+$$
+| (Ax - \lambda I) | = 0
+$$
+
+This is known as the characteristic equation of A. This equation is a ploynomial of degree $$N$$ in $$\lambda$$. The $$N$$ roots of this equation give the eigenvalues $${\lambda}_i$$, $$i = 1, ..., N$$, of $$A$$. Corresponding to each eigenvalue $${\lambda}_i$$ there will be a column vector $$x_i$$ which will be the eigenvector of $$A$$. This can be determined from the equation: 
+
+$$
+A x_i = {\lambda}_i x_i
+$$
 
 ## 10. Inverse
 The inverse of a square matrix $$A \in R$$ is denoted $$A^{−1}$$ , and is the unique matrix such that:
 
 $$
 A^{−1}*A = I = A*A^{-1}
+$$
+
+where $$I$$ is the identity matrix.
+
+Note that not all matrices have inverses. Non-square matrices, for example, do not have inverses by definition. However, for some square matrices $$A$$, it may still be the case that inverses may not exist. $$A$$ is invertible or non-singular if $$A^−1$$ exists and non-invertible or singular otherwise.
+
+**Properties**:
+- $$
+(A^{−1})^{-1} = A
+$$
+- $$
+{AB}^{−1} = B^{-1} A^{-1}
+$$
+- $$
+(A^{−1})^{T} = (A^{T})^{-1}
 $$
 
 ## 11. Norms
@@ -238,7 +283,7 @@ $$
 l_{\infty} = {\parallel x \parallel}_{\infty} = max |x_i|
 $$
 
-Example: 
+**Example**: 
 
 $$
 x = {[3, -4, 1, 2]}^T
