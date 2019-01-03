@@ -211,16 +211,27 @@ $$
 ## 8. Eigenvalues and Eigenvectors
 Eigenvectors are the **axes** (directions) along which a linear transformation acts simply by **stretching/compressing** and/or **flipping**; eigenvalues give you the factor/magnitude by which it occurs.
 
-Consider a $$N × N$$ matrix A with corresponding eigenvalue $$\lambda$$ and eigenvector $$x$$. Then we can rewrite the matrix equation $$Ax = \lambdax$$ as follows:
+Consider a $$N × N$$ matrix A with corresponding eigenvalue $$\lambda$$ and eigenvector $$x$$. Then we can rewrite the matrix equation $$Ax = \lambda x$$ as follows:
+
 
 ## 9. Determinant
 Like the trace, the determinant of a matrix is only defined for square matrices.
 
-## 10. Inverse
 A square matrix whose determinant is zero is called a singular matrix. Otherwise, it is called a non-singular matrix.
 
+The equations for determinants of matrices up to size 3 × 3 are fairly common, and it is good to know them:
+
+## 10. Inverse
+The inverse of a square matrix $$A \in R$$ n×n is denoted $$A^{−1}$$ , and is the unique matrix such that:
+
+$$
+A^{−1}*A = I = A*A^{-1}
+$$
+
 ## 11. Norms
-A norm of a vector is informally a measure of the **length** of the vector.
+A norm of a vector is informally a measure of the **length** of the vector. For example, a commonly-used Euclidean or $$l_2$$ norm.
+
+Norms can also be defined for matrices, such as the **Frobenius norm**.
 
 ## 12. Rank
 This is where I talk about Rank.
