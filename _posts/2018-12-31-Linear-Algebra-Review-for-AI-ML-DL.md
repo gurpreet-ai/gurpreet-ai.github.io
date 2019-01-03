@@ -323,7 +323,7 @@ $$
 
 where $$I$$ is the identity matrix.
 
-Note that not all matrices have inverses. Non-square matrices, for example, do not have inverses by definition. However, for some square matrices $$A$$, it may still be the case that inverses may not exist. $$A$$ is invertible or non-singular if $$A^−1$$ exists and non-invertible or singular otherwise.
+Note that not all matrices have inverses. Non-square matrices, for example, do not have inverses by definition. However, for some square matrices $$A$$, it may still be the case that inverses may not exist. $$A$$ is invertible or non-singular if $$A^{−1}$$ exists and non-invertible or singular otherwise.
 
 **Properties**:
 - $$(A^{−1})^{-1} = A$$
