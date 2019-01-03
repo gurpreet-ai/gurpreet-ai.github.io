@@ -213,23 +213,28 @@ Eigenvectors are the **axes** (directions) along which a linear transformation a
 
 Consider a $$N × N$$ matrix A with corresponding eigenvalue $$\lambda$$ and eigenvector $$x$$. Then we can rewrite the matrix equation $$Ax = \lambda x$$ as follows:
 
-
 ## 9. Determinant
-Like the trace, the determinant of a matrix is only defined for square matrices.
-
-A square matrix whose determinant is zero is called a singular matrix. Otherwise, it is called a non-singular matrix.
-
-The equations for determinants of matrices up to size 3 × 3 are fairly common, and it is good to know them:
+Like the trace, the determinant of a matrix is only defined for square matrices. A square matrix whose determinant is zero is called a singular matrix. Otherwise, it is called a non-singular matrix.
 
 ## 10. Inverse
-The inverse of a square matrix $$A \in R$$ n×n is denoted $$A^{−1}$$ , and is the unique matrix such that:
+The inverse of a square matrix $$A \in R$$ is denoted $$A^{−1}$$ , and is the unique matrix such that:
 
 $$
 A^{−1}*A = I = A*A^{-1}
 $$
 
 ## 11. Norms
-A norm of a vector is informally a measure of the **length** of the vector. For example, a commonly-used Euclidean or $$l_2$$ norm.
+A norm of a vector is informally a measure of the **length** of the vector. For example, a commonly-used Euclidean or $$l_2$$ norm. Other examples of norms are the $$l_1$$ norm, and $$l_{\inf}$$ norm.
+
+$$
+l_1 = {\parallel x \parallel}_1 = \mid x_1 \mid + \mid x_2 \mid + ... + \mid x_n \mid
+
+l_2 = {\parallel x \parallel}_2 = \sqrt{{\mid x_1 \mid}^2 + {\mid x_2 \mid}^2 + ... {\mid x_n \mid}^2}
+
+l_{\inf} = {\parallel x \parallel}_{\inf} = max \mid x_i \mid, i = 1,2,..n
+$$
+
+All three norms presented above are examples of the family of $$l_p$$ norms, which are parameterized by a real number $$p ≥ 1$$.
 
 Norms can also be defined for matrices, such as the **Frobenius norm**.
 
@@ -237,7 +242,7 @@ Norms can also be defined for matrices, such as the **Frobenius norm**.
 This is where I talk about Rank.
 
 ## 13. Diagonalization
-This is where I talk about Diagonalization.
+This is where I talk about diagonalization.
 
 ## 14. Singular Value Decomposition (SVD)
 This is where I talk about the SVD.
