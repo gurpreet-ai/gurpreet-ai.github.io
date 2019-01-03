@@ -222,7 +222,7 @@ Suppose you want to compute a matrix to a large exponent, i.e, $$A^{100}$$. Eige
 
 Suppose $$A$$ is a linear operator. Almost all vectors change direction, when they are multiplied by A. Certain exceptional vectors $$x$$ are in the same direction as $$Ax$$. Those are known as the "eigenvectors".
 
-Multiply an eigenvector by $$A$$, linear operator. The vector $$Ax$$ is a number $$\lambda$$ times the original $$x$$. The number $$\lambda$$ is an eigenvalue of A. The eigenvalue tells whether the special vector x is stretched or shrunk or reversed or left unchanged.
+Multiply an eigenvector by $$A$$. The vector $$Ax$$ is a number $$\lambda$$ times the original $$x$$. The number $$\lambda$$ is an eigenvalue of A. The eigenvalue tells whether the special vector $$x$$ is stretched or shrunk or reversed or left unchanged.
 
 $$Ax = \lambda x$$
 
@@ -241,6 +241,30 @@ $$|(Ax - \lambda I)| = 0$$
 This is known as the characteristic equation of A. This equation is a ploynomial of degree $$N$$ in $$\lambda$$. The $$N$$ roots of this equation give the eigenvalues $${\lambda}_i$$, $$i = 1, ..., N$$, of $$A$$. Corresponding to each eigenvalue $${\lambda}_i$$ there will be a column vector $$x_i$$ which will be the eigenvector of $$A$$. This can be determined from the equation: 
 
 $$A x_i = {\lambda}_i x_i$$
+
+**Example**: Determine the eigen values and normalized eigenvectors of the following matrix
+
+$$
+A = \left( \begin{array}{ccc}
+1 &  1 &  3 \\
+1 &  1 & -3 \\
+3 & -3 & -3 \\
+\end{array} \right)
+$$
+
+From the characteristic equation we get:
+
+$$
+|\begin{array}{ccc}
+1-\lambda &  1 &  3 \\
+1 &  1-\lambda & -3 \\
+3 & -3 & -3-\lambda \\
+\end{array}| = 0
+$$
+
+$$
+\Rightarrow (1−\lambda){(1−\lambda)(−3−\lambda)−9}−1{−3−\lambda+9}+3{−3−3(1−\lambda)} = 0
+$$
 
 ## 10. Inverse
 The inverse of a square matrix $$A \in R$$ is denoted $$A^{−1}$$ , and is the unique matrix such that:
