@@ -13,36 +13,14 @@ date:   2018-12-31 12:00:00
 - [6. Trace](#6-trace)
 - [7. Transpose](#7-transpose)
 - [8. Determinant](#8-determinant)
-- [9. Inverse](#9-inverse)
-- [10. Norms](#10-norms)
-- [11. Rank](#11-rank)
-- [12. Eigenvalues and Eigenvectors](#12-eigenvalues-eigenvectors)
-- [13. Diagonalization](#13-diagonalization)
-- [14. Singular Value Decomposition (SVD)](#14-singular-value-decomposition)
-
-## 6. Trace
-This is where I talk about Trace.
-
-## 7. Transpose
-This is where I talk about Transpose.
-
-## 8. Determinant
-This is where I talk about Determinant.
-
-## 9. Inverse
-This is where I talk about Inverse.
-
-## 10. Norms
-This is where I talk about Norms.
-
-## 11. Rank
-This is where I talk about Rank.
-
-## 12. Eigenvalues and Eigenvectors
-This is where I talk about Eigenvalues and Eigenvectors.
-
-## 13. Diagonalization
-This is where I talk about Matrix-Matrix Multiplication.
+- [9. Orthogonal Matrices](#9-orthogonal-matrices)
+- [10. Symmetric Matrices](#10-symmetric-matrices)
+- [11. Inverse](#11-inverse)
+- [12. Norms](#12-norms)
+- [13. Rank](#13-rank)
+- [14. Eigenvalues and Eigenvectors](#14-eigenvalues-eigenvectors)
+- [15. Diagonalization](#15-diagonalization)
+- [16. Singular Value Decomposition (SVD)](#16-singular-value-decomposition)
 
 ## 1. Matrices and Vectors
 Matrices are 2-dimensional arrays. The matrix below has four rows and three columns, so it is a 4 x 3 matrix. 
@@ -186,7 +164,7 @@ $$
 $$
 
 ## 6. Trace
-The trace of a square matrix, denoted tr(A), is the sum of diagonal elements in the matrix.
+The trace of a square matrix, denoted **Tr(A)**, is defined as the sum of the diagonal elements of the matrix.
 
 $$
 A = \left( \begin{array}{ccc}
@@ -197,7 +175,19 @@ A = \left( \begin{array}{ccc}
 $$
 
 $$
-tr(A) = -1 + 5 + -5 = -1
+Tr(A) = -1 + 5 + -5 = -1
+$$
+
+The trace of a matrix is a linear operation, for example:
+
+$$
+Tr(A + B) = Tr(A) + Tr(B)
+$$
+
+The trace of the product of matrices is independent of the order of their multiplication:
+
+$$
+Tr(AB) = Tr(BA)
 $$
 
 ## 7. Transpose
@@ -212,26 +202,26 @@ e & f \\
 $$
 
 $$
-A_T = \left( \begin{array}{ccc}
+A^T = \left( \begin{array}{ccc}
 a & c & e \\
-b & d $ f \\
+b & d & f \\
 \end{array} \right)
 $$
 
-## 8. Determinant
-This is where I talk about Determinant.
+## 8. Eigenvalues and Eigenvectors
+This is where I talk about Eigenvalues and Eigenvectors.
 
-## 9. Inverse
-This is where I talk about Inverse.
+## 9. Determinant
+Like the trace, the determinant of a matrix is only defined for square matrices.
 
-## 10. Norms
+## 10. Inverse
+A square matrix whose determinant is zero is called a singular matrix. Otherwise, it is called a non-singular matrix.
+
+## 11. Norms
 A norm of a vector is informally a measure of the **length** of the vector.
 
-## 11. Rank
+## 12. Rank
 This is where I talk about Rank.
-
-## 12. Eigenvalues and Eigenvectors
-This is where I talk about Eigenvalues and Eigenvectors.
 
 ## 13. Diagonalization
 This is where I talk about Diagonalization.
@@ -240,3 +230,4 @@ This is where I talk about Diagonalization.
 This is where I talk about the SVD.
 
 ## 15. Matrix Calculus
+This is where I talk about the matrix calculas.
