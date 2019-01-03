@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Probability Review for Artificial Intelligence, Machine Learning"
+title:  "Probability Review for Artificial Intelligence, Machine Learning, Deep Learning"
 date:   2018-12-31 12:00:00
 ---
 

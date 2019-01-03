@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Linear Algebra Review for Artificial Intelligence, Machine Learning"
+title:  "Linear Algebra Review for Artificial Intelligence, Machine Learning, Deep Learning"
 date:   2018-12-31 12:00:00
 ---
 
@@ -21,13 +21,16 @@ date:   2018-12-31 12:00:00
 - [14. Singular Value Decomposition (SVD)](#14-singular-value-decomposition)
 
 ## 6. Trace
+This is where I talk about Trace.
 
 ## 7. Transpose
+This is where I talk about Transpose.
 
 ## 8. Determinant
+This is where I talk about Determinant.
 
 ## 9. Inverse
-This is where I talk about Determinant, Inverse, Transpose, and Trace.
+This is where I talk about Inverse.
 
 ## 10. Norms
 This is where I talk about Norms.
@@ -183,10 +186,37 @@ $$
 $$
 
 ## 6. Trace
-This is where I talk about Trace.
+The trace of a square matrix, denoted tr(A), is the sum of diagonal elements in the matrix.
+
+$$
+A = \left( \begin{array}{ccc}
+-1 & 0 & 3 \\
+11 & 5 & 2 \\
+6 & 12 & -5
+\end{array} \right)
+$$
+
+$$
+tr(A) = -1 + 5 + -5 = -1
+$$
 
 ## 7. Transpose
-This is where I talk about Transpose.
+The transposition of a matrix is like rotating the matrix 90° in clockwise direction and then reversing it.
+
+$$
+A = \left( \begin{array}{ccc}
+a & b \\
+c & d \\
+e & f \\
+\end{array} \right)
+$$
+
+$$
+A_T = \left( \begin{array}{ccc}
+a & c & e \\
+b & d $ f \\
+\end{array} \right)
+$$
 
 ## 8. Determinant
 This is where I talk about Determinant.
@@ -195,7 +225,7 @@ This is where I talk about Determinant.
 This is where I talk about Inverse.
 
 ## 10. Norms
-This is where I talk about Norms.
+A norm of a vector is informally a measure of the **length** of the vector.
 
 ## 11. Rank
 This is where I talk about Rank.
@@ -208,3 +238,5 @@ This is where I talk about Diagonalization.
 
 ## 14. Singular Value Decomposition (SVD)
 This is where I talk about the SVD.
+
+## 15. Matrix Calculus
