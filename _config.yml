@@ -14,9 +14,9 @@ post_footer: true            # show previous and next links at the end of each p
 date_format: "%B %d, %Y"     # see http://shopify.github.io/liquid/filters/date/
 
 # Theme settings
-dark_theme: true            # enables dark mode
+dark_theme: true             # enables dark mode
 dark_header: false           # uses dark header whether dark_theme is enabled or not
-minimal_theme: true         # radically minimalistic theme
+minimal_theme: false         # radically minimalistic theme
 
 navigation:                  # (optional) site navigation in the header
   - index.html

@@ -307,7 +307,7 @@ $$
 Similarly we can determine:
 
 $$
-x^3 = \frac{1}{\sqrt{3}}{(1, -1, 1)}^T
+x^2 = \frac{1}{\sqrt{3}}{(1, -1, 1)}^T
 $$
 
 $$
