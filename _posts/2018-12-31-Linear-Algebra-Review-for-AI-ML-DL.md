@@ -255,15 +255,25 @@ $$
 From the characteristic equation we get:
 
 $$
-|\begin{array}{ccc}
+det \left( \begin{array}{ccc}
 1-\lambda &  1 &  3 \\
 1 &  1-\lambda & -3 \\
 3 & -3 & -3-\lambda \\
-\end{array}| = 0
+\end{array} \right) = 0
 $$
 
 $$
-\Rightarrow (1−\lambda){(1−\lambda)(−3−\lambda)−9}−1{−3−\lambda+9}+3{−3−3(1−\lambda)} = 0
+\Rightarrow (1 − \lambda)\lbrace(1 − \lambda)(−3 − \lambda) −9 \rbrace −1\lbrace−3 − \lambda + 9\rbrace + 3\lbrace−3 − 3(1 − \lambda)\rbrace = 0
+$$
+
+Simplifying we get:
+
+$$
+\Rightarrow {\lambda}^3 + {\lambda}^2 − 24 \lambda + 36 = {\lambda}^3 +3{\lambda}^2 −2{\lambda}^2 − 6\lambda − 18\lambda + 36 = 0
+$$
+
+$$
+\Rightarrow (\lambda − 2)(\lambda − 3)(\lambda + 6) = 0
 $$
 
 ## 10. Inverse
