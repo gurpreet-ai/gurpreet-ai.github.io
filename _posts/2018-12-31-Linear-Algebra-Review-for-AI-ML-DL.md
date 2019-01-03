@@ -227,11 +227,12 @@ $$
 A norm of a vector is informally a measure of the **length** of the vector. For example, a commonly-used Euclidean or $$l_2$$ norm. Other examples of norms are the $$l_1$$ norm, and $$l_{\inf}$$ norm.
 
 $$
-l_1 = {\parallel x \parallel}_1 = \mid x_1 \mid + \mid x_2 \mid + ... + \mid x_n \mid
+l_1 = {\parallel x \parallel}_1 = \abs{x_1} + \abs{x_2} + ... + \abs{x_n} \mid
 
-l_2 = {\parallel x \parallel}_2 = \sqrt{{\mid x_1 \mid}^2 + {\mid x_2 \mid}^2 + ... {\mid x_n \mid}^2}
+l_2 = {\parallel x \parallel}_2 = \sqrt{{\abs{x_1}}^2 + {\abs{x_2}}^2 + ... {\abs{x_n}}^2}
 
-l_{\inf} = {\parallel x \parallel}_{\inf} = max \mid x_i \mid, i = 1,2,..n
+l_{\inf} = {\parallel x \parallel}_{\inf} = max \abs{x_i}, i = 1,2,..n
+
 $$
 
 All three norms presented above are examples of the family of $$l_p$$ norms, which are parameterized by a real number $$p ≥ 1$$.
