@@ -9,7 +9,8 @@ date:   2018-12-31 12:00:00
 - [2. Conditional Probability](#2-conditional-theory)
 - [3. Chain Rule](#3-chain-rule)
 - [4. Bayes Rule](#4-bayes-rule)
-- [5. Random Variables](#5-random-variables)
+- [5. Discrete Random Variables](#5-discrete-random-variables)
+- [6. Continuous Random Variables](#6-discrete-random-variables)
 
 ## 1. Probability Theory
 This is where I talk about probability theory.
@@ -23,5 +24,8 @@ This is where I talk about chain Rule.
 ## 4. Bayes Rule
 This is where I talk about Bayes Rule.
 
-## 5. Random Variables
+## 5. Discrete Random Variables
+This is where I talk about Random Variables.
+
+## 6. Continuous Random Variables
 This is where I talk about Random Variables.
