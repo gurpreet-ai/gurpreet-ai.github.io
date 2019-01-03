@@ -237,9 +237,9 @@ The equation $$(Ax - \lambda I)x = 0$$ has a nontrivial solution if and only if 
 
 $$|(Ax - \lambda I)| = 0$$
 
-This is known as the characteristic equation of A. This equation is a ploynomial of degree $$N$$ in $$\lambda$$. The $$N$$ roots of this equation give the eigenvalues $${\lambda}_i$$, $$i = 1, ..., N$$, of $$A$$. Corresponding to each eigenvalue $${\lambda}_i$$ there will be a column vector $$x_i$$ which will be the eigenvector of $$A$$. This can be determined from the equation: 
+This is known as the characteristic equation of A. This equation is a ploynomial of degree $$N$$ in $$\lambda$$. The $$N$$ roots of this equation give the eigenvalues $${\lambda}_i$$, $$i = 1, ..., N$$, of $$A$$. Corresponding to each eigenvalue $${\lambda}_i$$ there will be a column vector $$\hat{x}_i$$ which will be the eigenvector of $$A$$. This can be determined from the equation: 
 
-$$A x_i = {\lambda}_i x_i$$
+$$A \hat{x}_i = {\lambda}_i \hat{x}_i$$
 
 **Example**: Determine the eigen values and normalized eigenvectors of the following matrix
 
