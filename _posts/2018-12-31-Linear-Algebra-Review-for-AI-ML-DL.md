@@ -211,7 +211,7 @@ $$
 ## 8. Eigenvalues and Eigenvectors
 Eigenvectors are the **axes** (directions) along which a linear transformation acts simply by **stretching/compressing** and/or **flipping**; eigenvalues give you the factor/magnitude by which it occurs.
 
-Consider a $$N × N$$ matrix A with corresponding eigenvalue $$\lambda$$ and eigenvector $$x$$. Then we can rewrite the matrix equation Ax = λx as follows:
+Consider a $$N × N$$ matrix A with corresponding eigenvalue $$\lambda$$ and eigenvector $$x$$. Then we can rewrite the matrix equation $$Ax = \lambdax$$ as follows:
 
 ## 9. Determinant
 Like the trace, the determinant of a matrix is only defined for square matrices.
