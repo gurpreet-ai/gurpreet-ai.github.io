@@ -14,12 +14,11 @@ date:   2018-12-31 12:00:00
 - [7. Transpose](#7-transpose)
 - [8. Determinant](#8-determinant)
 - [9. Eigenvalues and Eigenvectors](#9-eigenvalues-eigenvectors)
-- [9. Orthogonal Matrices](#9-orthogonal-matrices)
-- [10. Symmetric Matrices](#10-symmetric-matrices)
-- [11. Inverse](#11-inverse)
-- [12. Norms](#12-norms)
-- [13. Rank](#13-rank)
-- [14. Eigenvalues and Eigenvectors](#14-eigenvalues-eigenvectors)
+- [10. Orthogonal Matrices](#10-orthogonal-matrices)
+- [11. Symmetric Matrices](#11-symmetric-matrices)
+- [12. Inverse](#12-inverse)
+- [13. Norms](#13-norms)
+- [14. Rank](#14-rank)
 - [15. Diagonalization](#15-diagonalization)
 - [16. Singular Value Decomposition (SVD)](#16-singular-value-decomposition)
 
@@ -276,7 +275,40 @@ $$
 \Rightarrow (\lambda − 2)(\lambda − 3)(\lambda + 6) = 0
 $$
 
-## 10. Inverse
+So $$\lambda_1 = 2, \lambda_2 = 3,and \lambda_3 = −6$$ are the eigenvalues of A.
+
+Now for eigenvalue $$\lambda_1 = 2$$ we determine the eigen vector **$$x^1$$** with elements $$x_1, x_2, x_3$$. Using the equation $$Ax^1 = 2x^1$$ we get:
+
+$$
+x_1 + x_2 + 3x_3 = 2x_1
+x_1 + x_2 − 3x_3 = 2x_2
+3x_1 − 3x_2 −3x_3 = 2x_3
+$$
+
+Solving we get $$x_1 = x_2 = k$$, where $$k$$ in any non-zero number, and $$x_3 = 0$$. A suitable eigenvector is $$x^1 = {(k k 0)}^T$$.
+
+For normalization we require: 
+
+$$k^2 + k^2 + 0 = 1$$
+$$ \Rightarrow k = \frac{1}{\sqrt{2}}$$
+
+So the normalized eigen vector is given by:
+
+$$
+x^1 = \frac{1}{\sqrt{2}}{(1 1 0)}^T
+$$
+
+Similarly we can determine:
+
+$$
+x^3 = \frac{1}{\sqrt{3}}{(1 -1 1)}^T
+$$
+
+$$
+x^3 = \frac{1}{\sqrt{6}}{(1 -1 -2)}^T
+$$
+
+## 12. Inverse
 The inverse of a square matrix $$A \in R$$ is denoted $$A^{−1}$$ , and is the unique matrix such that:
 
 $$
@@ -292,7 +324,7 @@ Note that not all matrices have inverses. Non-square matrices, for example, do n
 - $${AB}^{−1} = B^{-1} A^{-1}$$
 - $$(A^{−1})^{T} = (A^{T})^{-1}$$
 
-## 11. Norms
+## 13. Norms
 A norm of a vector is informally a measure of the **length** of the vector. For example, a commonly-used Euclidean or $$l_2$$ norm. Other examples of norms are the $$l_1$$ norm, and $$l_{\infty}$$ norm.
 
 $$ 
