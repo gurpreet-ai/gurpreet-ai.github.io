@@ -221,7 +221,9 @@ Like the trace, the determinant of a matrix is only defined for square matrices.
 Consider a $$N × N$$ matrix $$A$$ with corresponding eigenvalue $$\lambda$$ and eigenvector $$x$$. Then we can rewrite the matrix equation $$Ax = \lambda x$$ as follows:
 
 $$Ax - \lambda x = 0$$
+
 $$Ax - \lambda I x = 0$$
+
 $$(Ax - \lambda I) x = 0$$
 
 Thus $$x$$ is an eigenvector of $$A$$ corresponding to the eigenvalue $$\lambda$$ if and only if $$x$$ and $$\lambda$$ satisfy $$(Ax - \lambda I)x = 0$$.
