@@ -210,15 +210,13 @@ b & d & f \\
 $$
 
 ## 8. Determinant
-Like the trace, the determinant of a matrix is only defined for square matrices. A square matrix whose determinant is zero is called a singular matrix. Otherwise, it is called a non-singular matrix.
+Like the trace, the determinant of a matrix is only defined for square matrices. A square matrix whose determinant is zero is called a **singular matrix**. Otherwise, it is called a **non-singular matrix**.
 
 **Properties**:
 - A matrix and its transpose have the same determinant.
 - If two rows (columns) of A are interchanged its determinant changes sign but is unaltered in magnitude.
 
-
 ## 9. Eigenvalues and Eigenvectors
-Eigenvectors are the **axes** (directions) along which a linear transformation acts simply by **stretching/compressing** and/or **flipping**; eigenvalues give you the factor/magnitude by which it occurs.
 
 Consider a $$N × N$$ matrix $$A$$ with corresponding eigenvalue $$\lambda$$ and eigenvector $$x$$. Then we can rewrite the matrix equation $$Ax = \lambda x$$ as follows:
 
@@ -232,7 +230,7 @@ $$
 (Ax - \lambda I) x = 0
 $$
 
-Thus $$x$$ is an eigenvector of $$A$$ corresponding to the eigenvalue $$\lambda$$ if and only if $$x$$ and $$\lamnda$$ satisfy $$(Ax - \lambda I)x = 0$$.
+Thus $$x$$ is an eigenvector of $$A$$ corresponding to the eigenvalue $$\lambda$$ if and only if $$x$$ and $$\lambda$$ satisfy $$(Ax - \lambda I)x = 0$$.
 
 The equation $$(Ax - \lambda I)x = 0$$ has a nontrivial solution if and only if the determinant of $$(Ax - \lambda I)$$ is zero.
 
