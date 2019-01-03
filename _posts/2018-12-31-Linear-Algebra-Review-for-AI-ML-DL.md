@@ -230,7 +230,9 @@ A norm of a vector is informally a measure of the **length** of the vector. For 
 $$ l_2 = {\parallel x \parallel}_2 = \sqrt{|x_1|}^2 + {|x_2|}^2 + ... {|x_n|}^2} $$
 $$ l_{\infty} = {\parallel x \parallel}_{\infty} = max |x_i|, i = 1,2,..n $$ -->
 
-$ l_1 = {\parallel x \parallel}_1 $
+$$ 
+l_1 = {\parallel x \parallel}_1 = |x_1| + |x_2| + ... + |x_n| 
+$$
 
 All three norms presented above are examples of the family of $$l_p$$ norms, which are parameterized by a real number $$p ≥ 1$$.
 
