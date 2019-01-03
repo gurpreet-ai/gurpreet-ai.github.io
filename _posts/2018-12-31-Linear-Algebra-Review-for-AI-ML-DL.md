@@ -235,7 +235,25 @@ l_2 = {\parallel x \parallel}_2 = \sqrt{|x_1|^2 + |x_2|^2 + ... |x_n|^2}
 $$
 
 $$
-l_{\infty} = {\parallel x \parallel}_{\infty} = max |x_i|, i = 1,2,..n
+l_{\infty} = {\parallel x \parallel}_{\infty} = max |x_i|
+$$
+
+Example: 
+
+$$
+x = {[3, -4, 1, 2]}^T
+$$
+
+$$ 
+l_1 = |3| + |-4| + |1| + |2| = 10 
+$$
+
+$$
+l_2 = \sqrt{|3|^2 + |-4|^2 + |1|^2 + |2|^2} = \sqrt{30}
+$$
+
+$$
+l_{\infty} = 4
 $$
 
 All three norms presented above are examples of the family of $$l_p$$ norms, which are parameterized by a real number $$p ≥ 1$$.
