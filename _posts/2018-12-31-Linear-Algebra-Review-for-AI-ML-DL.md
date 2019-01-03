@@ -220,15 +220,9 @@ Like the trace, the determinant of a matrix is only defined for square matrices.
 
 Consider a $$N × N$$ matrix $$A$$ with corresponding eigenvalue $$\lambda$$ and eigenvector $$x$$. Then we can rewrite the matrix equation $$Ax = \lambda x$$ as follows:
 
-$$
-Ax - \lambda x = 0
-$$
-$$
-Ax - \lambda I x = 0
-$$
-$$
-(Ax - \lambda I) x = 0
-$$
+$$Ax - \lambda x = 0$$
+$$Ax - \lambda I x = 0$$
+$$(Ax - \lambda I) x = 0$$
 
 Thus $$x$$ is an eigenvector of $$A$$ corresponding to the eigenvalue $$\lambda$$ if and only if $$x$$ and $$\lambda$$ satisfy $$(Ax - \lambda I)x = 0$$.
 
@@ -256,15 +250,9 @@ where $$I$$ is the identity matrix.
 Note that not all matrices have inverses. Non-square matrices, for example, do not have inverses by definition. However, for some square matrices $$A$$, it may still be the case that inverses may not exist. $$A$$ is invertible or non-singular if $$A^−1$$ exists and non-invertible or singular otherwise.
 
 **Properties**:
-- $$
-(A^{−1})^{-1} = A
-$$
-- $$
-{AB}^{−1} = B^{-1} A^{-1}
-$$
-- $$
-(A^{−1})^{T} = (A^{T})^{-1}
-$$
+- $$(A^{−1})^{-1} = A$$
+- $${AB}^{−1} = B^{-1} A^{-1}$$
+- $$(A^{−1})^{T} = (A^{T})^{-1}$$
 
 ## 11. Norms
 A norm of a vector is informally a measure of the **length** of the vector. For example, a commonly-used Euclidean or $$l_2$$ norm. Other examples of norms are the $$l_1$$ norm, and $$l_{\infty}$$ norm.
