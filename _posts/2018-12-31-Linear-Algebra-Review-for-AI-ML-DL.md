@@ -218,7 +218,13 @@ Like the trace, the determinant of a matrix is only defined for square matrices.
 
 ## 9. Eigenvalues and Eigenvectors
 
-Consider a $$N × N$$ matrix $$A$$ with corresponding eigenvalue $$\lambda$$ and eigenvector $$x$$. Then we can rewrite the matrix equation $$Ax = \lambda x$$ as follows:
+Suppose you want to compute a matrix to a large exponent, i.e, $$A^{100}$$. Eigenvalues and eigenvectors allow you do this very nicely without multiplying 100 matrices. 
+
+Suppose $$A$$ is a linear operator. Almost all vectors change direction, when they are multiplied by A. Certain exceptional vectors $$x$$ are in the same direction as $$Ax$$. Those are known as the "eigenvectors".
+
+Multiply an eigenvector by $$A$$, linear operator. The vector $$Ax$$ is a number $$\lambda$$ times the original $$x$$. The number $$\lambda$$ is an eigenvalue of A. The eigenvalue tells whether the special vector x is stretched or shrunk or reversed or left unchanged.
+
+$$Ax = \lambda x$$
 
 $$Ax - \lambda x = 0$$
 
@@ -230,15 +236,11 @@ Thus $$x$$ is an eigenvector of $$A$$ corresponding to the eigenvalue $$\lambda$
 
 The equation $$(Ax - \lambda I)x = 0$$ has a nontrivial solution if and only if the determinant of $$(Ax - \lambda I)$$ is zero.
 
-$$
-| (Ax - \lambda I) | = 0
-$$
+$$|(Ax - \lambda I)| = 0$$
 
 This is known as the characteristic equation of A. This equation is a ploynomial of degree $$N$$ in $$\lambda$$. The $$N$$ roots of this equation give the eigenvalues $${\lambda}_i$$, $$i = 1, ..., N$$, of $$A$$. Corresponding to each eigenvalue $${\lambda}_i$$ there will be a column vector $$x_i$$ which will be the eigenvector of $$A$$. This can be determined from the equation: 
 
-$$
-A x_i = {\lambda}_i x_i
-$$
+$$A x_i = {\lambda}_i x_i$$
 
 ## 10. Inverse
 The inverse of a square matrix $$A \in R$$ is denoted $$A^{−1}$$ , and is the unique matrix such that:
