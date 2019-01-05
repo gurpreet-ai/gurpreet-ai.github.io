@@ -96,7 +96,7 @@ x
 =
 \left( \begin{array}{ccc}
 a*x & b*x \\
-c*y & d*z \\
+c*x & d*x \\
 \end{array} \right)
 $$
 
@@ -277,7 +277,7 @@ $$
 
 So $$\lambda_1 = 2$$, $$\lambda_2 = 3$$, and $$\lambda_3 = −6$$ are the eigenvalues of A.
 
-Now for eigenvalue $$\lambda_1 = 2$$ we determine the eigen vector **$$x^1$$** with elements $$x_1, x_2, x_3$$. Using the equation $$A\hat{x}_1 = 2\hat{x}_1$$ we get:
+Now for eigenvalue $$\lambda_1 = 2$$ we determine the eigen vector **$$\hat{x}_1$$** with elements $$x_1, x_2, x_3$$. Using the equation $$A\hat{x}_1 = 2\hat{x}_1$$ we get:
 
 $$
 x_1 + x_2 + 3x_3 = 2x_1
