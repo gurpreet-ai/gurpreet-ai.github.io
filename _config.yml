@@ -21,7 +21,6 @@ minimal_theme: false         # radically minimalistic theme
 navigation:                  # (optional) site navigation in the header
   - index.html
   - about.md
-  - resume.md
 
 icons:                       # (optional) fontawesome icons in the header
   envelope: "mailto:"
