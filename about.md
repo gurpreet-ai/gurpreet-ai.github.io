@@ -15,8 +15,8 @@ Ship detection has a wide range of real life application, in the areas of mariti
 
 ## Education
 
-**Stevens Institute of Technology**
-Masters of Science in Computer Science
+**Stevens Institute of Technology**  
+Masters of Science in Computer Science  
 
-**The City College of New York**
+**The City College of New York**  
 Bachelor of Science in Computer Science
