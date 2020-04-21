@@ -35,6 +35,7 @@ endif %}
 	color: deepskyblue;
 }
 </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.0.0/mermaid.min.js"></script>
 <header>
 	{% unless site.hide_title %}<h1><a href="{{ "/" | relative_url }}">{{ site.title | escape }}</a></h1>{% endunless %}
 	{% if site.navigation %}<nav>{% for path in site.navigation %}{% assign node = site.pages | where: "name", path |

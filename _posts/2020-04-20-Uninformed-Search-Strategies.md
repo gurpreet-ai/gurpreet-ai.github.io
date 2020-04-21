@@ -16,7 +16,11 @@ Uninformed or blind search strategies are a class of search algorithms where we 
 
 ## Breadth-first search
 
-```mermaid
+<div class="mermaid">graph LR
+A--&gt;B
+</div>
+
+<div class="mermaid">
 graph TB
 A((A)) --> B((B))
 A --> C((C))
@@ -25,7 +29,7 @@ B --> E((E))
 C --> F((F))
 C --> G((G))
 style A fill:#f9f
-```
+</div>>
 
 ```mermaid
 graph TB
