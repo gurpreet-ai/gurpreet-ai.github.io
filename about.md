@@ -3,8 +3,6 @@ layout: about
 title: "About"
 ---
 
-## About
-
 Welcome to my Github portfolio. I share some of my work and knowledge on this blog.
 
 ## Projects
