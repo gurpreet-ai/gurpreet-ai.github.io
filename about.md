@@ -3,7 +3,7 @@ layout: about
 title: "About"
 ---
 
-Welcome to my Github portfolio. I share some of my work and knowledge on this blog.
+Welcome to my Github portfolio. I share some of my work and knowledge on this blog. You can also read about some of my linux articles on Linux.Tips.
 
 ## Projects
 

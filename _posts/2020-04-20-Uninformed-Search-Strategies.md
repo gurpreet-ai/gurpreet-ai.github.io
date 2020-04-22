@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Uninformed search strategies - BFS, DFS"
+title:  "Uninformed search strategies - Depth-first search (DFS), Breadth-first search (BFS)"
 date:   2020-04-22 12:00:00
 ---
 

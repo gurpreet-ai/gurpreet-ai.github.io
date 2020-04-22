@@ -6,8 +6,10 @@ layout: default
 	<header><h1>Articles</h1></header>
 	{% for post in site.posts %}
 	{%- assign date_format = site.date_format | default: "%B %d, %Y" -%}
-	<div>
-		<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: date_format )}}</time><br></br>
+	<div class="datetime">
+		<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: date_format )}}</time>
+	</div>
+	<div class="title">	
 		<h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
 	</div>
 	{% endfor %}
