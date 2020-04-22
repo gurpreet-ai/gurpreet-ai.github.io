@@ -4,10 +4,13 @@ title:  "Introduction to Deep Reinforcement Learning - Deep Reinforcement Learni
 date:   2020-04-22 12:00:00
 ---
 
-Reinforcement learning is currently one of the most active areas of research in artificial intelligence because its combination with deep learning makes it possible to solve complex and challenging problems than before. In this series of articles, we will dive into the area of deep reinforcement learning. But before we talk about it, we need to understand basic concepts in reinforcement learning and deep learning.
+Reinforcement learning is currently one of the most active areas of research in artificial intelligence because of its combination with deep learning makes it possible to solve complex and challenging problems with high dimentional state-space. In this series of articles, I will dive into the area of deep reinforcement learning. But before I talk about it, I need to make sure you understand basic concepts in reinforcement learning and deep learning.
 
-# Goal
-The goal of this article is to explain what is reinforcement learning and what is deep learning in simple terms.
+# Series Goal
+The goal of this series is to give the reader an introduction to deep reinforcement learning, skills on how to create deep RL models using pytorch and deep RL algorithms.
+
+# Article Goal
+The goal of this article is to explain what is reinforcement learning (RL), how to formulate a RL problem, types of RL methods, and finally what is deep learning and how it has been combined with RL to create deep reinforcement learning.
 
 # Topics
 - [1. What is reinforcement learning?](#1-what-is-reinforment-learning)
@@ -51,20 +54,20 @@ There are four approaches to RL that we will be explaining in this series.
 
 ## 4. How it differs from supervised and unsupervised learning?
 
-In supervised learning, agents learn from training datasets which has a labeled set of inputs and outputs. The goal is to generalize learning so that we can generate the correct output for unseen inputs.
+In **supervised learning**, agents learn from training datasets which has a labeled set of inputs and outputs. The goal is to generalize learning so that we can generate the correct output for unseen inputs.
 
 Examples of supervised learning includes the following:
 
-- Image classification: hot dog or not hot dog? (labels are categorical)
-- Regression: predicting house prices based (labels are continuous)
+- **Image classification**: hot dog or not hot dog? (labels are categorical)
+- **Regression**: predicting house prices based (labels are continuous)
 
-In unsupervised learning, we have to draw inferences from training dataset which only has a set of inputs and no known output labels for the inputs. The goal is to learn the hidden structure in the dataset.
+In **unsupervised learning**, we have to draw inferences from training dataset which only has a set of inputs and no known output labels for the inputs. The goal is to learn the hidden structure in the dataset.
 
 Examples of unsupervised learning includes the following:
 
-- Clustering: K-means
-- Dimensionality reduction: PCA
-- Generative Adversarial Networks (GANs)
+- **Clustering**: K-means
+- **Dimensionality reduction**: PCA
+- **Generative Adversarial Networks (GANs)**
 
 ## 5. What is deep learning?
 
@@ -74,10 +77,8 @@ In this series most of our examples can be run on CPUs and maybe trained faster 
 
 ## 6. What is deep reinforcement learning?
 
-Deep Reinforcement Learning is the combination of reinforcement learning techniques with deep learning. This field has become popular since the success of Deep Q-Networks (DQN) introduced by DeepMind. Researchers at DeepMind used neural networks and showed that deep learning with convolutional layers can enable reinforcement learning algorithms to successfully learn to play Atari 2600 games. The only input used for training the networks was the pixel images and the game score. The performance on Atari games was impressive, as the learned policies were often able to outperform human players. This was a big milestone for deep reinforcement learning community.
+Deep Reinforcement Learning is the combination of reinforcement learning techniques with deep learning. This field has become popular since the success of Deep Q-Networks (DQN) introduced by DeepMind. Researchers at DeepMind used neural networks and showed that deep learning with convolutional layers can enable reinforcement learning algorithms to successfully learn to play Atari 2600 games. The only input used for training the networks was the pixel images and the game score. The performance on Atari games was impressive, as the learned policies were often able to outperform human players. This was a big milestone for deep reinforcement learning community. I will discuss more success as we move along with this series in the other articles.
 
-DQN was big success with solving high dimensional state space with discrete action space. But how do you deal with continuous action spaces? Most problems in robotics and controls fall into the continuous action space category. Next Google DeepMind introduced the Deep Deterministic Policy Gradient (DDPG) algorithm to deal with both high dimensional state and action spaces.
+Deep RL has applications in robotics, self-driving cars, healthcare, finance and many more. However, there are many challenges in applying deep RL algorithms such state space exploration. Thus, there are many algorithms proposed in literature that we will go over in this series along with cool projects.
 
-I will discuss more success as we move along with this series in the other articles.
-
-Thank you for reading this article. You can share it and move forward with
+Thank you for reading this article. You can share it and start reading the next article in the series.
