@@ -14,6 +14,7 @@ Uninformed or blind search strategies are a class of search algorithms where we 
 
 Breadth-first search (BFS) starts and processes all nodes that are direct neighbours of starting node. Then it processes all direct neighbours of direct neighbours of starting nodes (excluding the ones already processed) and so on. The visualization below shows the BFS algorithm in action.
 
+
 ```mermaid
 graph TB
 A((A)) --> B((B))
@@ -23,6 +24,8 @@ B --> E((E))
 C --> F((F))
 C --> G((G))
 style A fill:#f9f
+style B fill:white
+style C fill:white
 ```
 
 ```mermaid
@@ -35,6 +38,9 @@ C --> F((F))
 C --> G((G))
 style A fill:#808080
 style B fill:#f9f
+style C fill:white
+style D fill:white
+style E fill:white
 ```
 
 ```mermaid
@@ -48,6 +54,10 @@ C --> G((G))
 style A fill:#808080
 style B fill:#808080
 style C fill:#f9f
+style D fill:white
+style E fill:white
+style F fill:white
+style G fill:white
 ```
 
 ```mermaid
@@ -62,6 +72,9 @@ style A fill:#808080
 style B fill:#808080
 style C fill:#808080
 style D fill:#f9f
+style E fill:white
+style F fill:white
+style G fill:white
 ```
 
 
@@ -78,6 +91,8 @@ style B fill:#808080
 style C fill:#808080
 style D fill:#808080
 style E fill:#f9f
+style F fill:white
+style G fill:white
 ```
 
 ```mermaid
@@ -94,6 +109,7 @@ style C fill:#808080
 style D fill:#808080
 style E fill:#808080
 style F fill:#f9f
+style G fill:white
 ```
 
 ```mermaid
@@ -130,13 +146,234 @@ style F fill:#808080
 style G fill:#808080
 ```
 
-
 ```cpp
 int main() 
 {
-
+	cout << "coming soon...";
 }
 ```
+
 ## 2. Depth-first search (DFS)
 
 
+```mermaid
+graph TB
+A((A)) --> B((B))
+A --> C((C))
+B --> D((D))
+B --> E((E))
+C --> F((F))
+C --> G((G))
+style A fill:#f9f
+style B fill:white
+style C fill: white
+```
+
+```mermaid
+graph TB
+A((A)) --> B((B))
+A --> C((C))
+B --> D((D))
+B --> E((E))
+C --> F((F))
+C --> G((G))
+style A fill:#f9f
+style B fill:#f9f
+style C fill: white
+style D fill:white
+style E fill: white
+```
+
+```mermaid
+graph TB
+A((A)) --> B((B))
+A --> C((C))
+B --> D((D))
+B --> E((E))
+C --> F((F))
+C --> G((G))
+style A fill:#f9f
+style B fill:#f9f
+style D fill:#f9f
+style E fill: white
+style C fill: white
+```
+
+```mermaid
+graph TB
+A((A)) --> B((B))
+A --> C((C))
+B --> D((D))
+B --> E((E))
+C --> F((F))
+C --> G((G))
+style A fill:#f9f
+style B fill:#f9f
+style D fill:#808080
+style E fill: white
+style C fill: white
+```
+
+```mermaid
+graph TB
+A((A)) --> B((B))
+A --> C((C))
+B --> D((D))
+B --> E((E))
+C --> F((F))
+C --> G((G))
+style A fill:#f9f
+style B fill:#f9f
+style E fill:#f9f
+style D fill:#808080
+style C fill: white
+```
+```mermaid
+graph TB
+A((A)) --> B((B))
+A --> C((C))
+B --> D((D))
+B --> E((E))
+C --> F((F))
+C --> G((G))
+style A fill:#f9f
+style B fill:#f9f
+style E fill:#808080
+style D fill:#808080
+style C fill: white
+```
+
+```mermaid
+graph TB
+A((A)) --> B((B))
+A --> C((C))
+B --> D((D))
+B --> E((E))
+C --> F((F))
+C --> G((G))
+style A fill:#f9f
+style B fill:#808080
+style E fill:#808080
+style D fill:#808080
+style C fill: white
+```
+
+```mermaid
+graph TB
+A((A)) --> B((B))
+A --> C((C))
+B --> D((D))
+B --> E((E))
+C --> F((F))
+C --> G((G))
+style A fill:#f9f
+style C fill:#f9f
+style B fill:#808080
+style E fill:#808080
+style D fill:#808080
+style F fill: white
+style G fill: white
+
+```
+
+```mermaid
+graph TB
+A((A)) --> B((B))
+A --> C((C))
+B --> D((D))
+B --> E((E))
+C --> F((F))
+C --> G((G))
+style A fill:#f9f
+style C fill:#f9f
+style F fill:#f9f
+style B fill:#808080
+style E fill:#808080
+style D fill:#808080
+style G fill: white
+```
+
+```mermaid
+graph TB
+A((A)) --> B((B))
+A --> C((C))
+B --> D((D))
+B --> E((E))
+C --> F((F))
+C --> G((G))
+style A fill:#f9f
+style C fill:#f9f
+style F fill:#808080
+style B fill:#808080
+style E fill:#808080
+style D fill:#808080
+style G fill: white
+```
+
+```mermaid
+graph TB
+A((A)) --> B((B))
+A --> C((C))
+B --> D((D))
+B --> E((E))
+C --> F((F))
+C --> G((G))
+style A fill:#f9f
+style C fill:#f9f
+style G fill:#f9f
+style F fill:#808080
+style B fill:#808080
+style E fill:#808080
+style D fill:#808080
+```
+
+```mermaid
+graph TB
+A((A)) --> B((B))
+A --> C((C))
+B --> D((D))
+B --> E((E))
+C --> F((F))
+C --> G((G))
+style A fill:#f9f
+style C fill:#f9f
+style G fill:#808080
+style F fill:#808080
+style B fill:#808080
+style E fill:#808080
+style D fill:#808080
+```
+
+```mermaid
+graph TB
+A((A)) --> B((B))
+A --> C((C))
+B --> D((D))
+B --> E((E))
+C --> F((F))
+C --> G((G))
+style A fill:#f9f
+style C fill:#808080
+style G fill:#808080
+style F fill:#808080
+style B fill:#808080
+style E fill:#808080
+style D fill:#808080
+```
+
+```mermaid
+graph TB
+A((A)) --> B((B))
+A --> C((C))
+B --> D((D))
+B --> E((E))
+C --> F((F))
+C --> G((G))
+style A fill:#808080
+style C fill:#808080
+style G fill:#808080
+style F fill:#808080
+style B fill:#808080
+style E fill:#808080
+style D fill:#808080
+```

@@ -16,12 +16,13 @@ date:   2018-12-31 12:00:00
 
 Consider an experiment whose sample space is .  For each event E of the sample space we assume that a number E is defined and satisfies the following three axioms:  
 
-**Axiom 1** states probability that the outcome of the experiment is an outcome in E is some number between 0 and 1.  
+**Axiom 1** states probability that the outcome of the experiment is an outcome in E is some number between 0 and 1.
+
 $$
 0 \le P(E) \le 1
 $$
 
-**Axiom 2** states that with probability 1, the outcome will be a point in the sample space S.  
+**Axiom 2** states that with probability 1, the outcome will be a point in the sample space S.
 
 $$
 P(S) = 1
