@@ -53,7 +53,7 @@ Markov Decision Processes (fully observable environment and control over the sta
 - $$R(s, a, s_{t+1})$$: $$S \times A \rightarrow R$$: reward function which gives us a reward for taking action $$a$$ in state $$s$$ and ending up in $$s_{t+1}$$.
 - $$\gamma$$: discount factor for future rewards which allows us give future rewards less importance than the immediate reward.
 
-The image below shows a MDP. We have three states $(S_{0}, S_{1}, S_{2})$, two possible action in each state $(a_{0}, a_{1})$, probability transition matrix, two rewards ($-1$ from $a_1$, $+5$ from $a_0$). The $\gamma$ in this case can be $1$. Notice all action probabilities from each state sum to $1$.
+The image below shows a MDP. We have three states $$(S_{0}, S_{1}, S_{2})$$, two possible action in each state $$(a_{0}, a_{1})$$, probability transition matrix, two rewards ($$-1$$ from $$a_1$$, $$+5$$ from $$a_0$$). The $$\gamma$$ in this case can be $1$. Notice all action probabilities from each state sum to $$1$$.
 
 ![MDP1]
 
