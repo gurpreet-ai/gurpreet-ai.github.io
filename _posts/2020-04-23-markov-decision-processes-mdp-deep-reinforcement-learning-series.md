@@ -49,7 +49,7 @@ In reinforcement learning, we will control over the state transitions, and may o
 Markov Decision Processes (fully observable environment and control over the state transitions) is a directed graph which has states for nodes and edges which describe transitions between states. All states in MDPs satisfy the Markov property. It is defined by 5-tuple $$(S, A, P(s_{t+1} | s, a), R(s, a, s_{t+1}), \gamma)$$:
 - $$S$$: finite set of possible states.
 - $$A$$: finite set of possible actions.
-- $$P(s_{t+1} | s, a)$$: $$S \times A \rightarrow P$$: probability distribution over next state given current state $$s$$, and taking action $$a$$.
+- $$P(s_{t+1} | s, a)$$: probability distribution over next state given current state $$s$$, and taking action $$a$$.
 - $$R(s, a, s_{t+1})$$: $$S \times A \rightarrow R$$: reward function which gives us a reward for taking action $$a$$ in state $$s$$ and ending up in $$s_{t+1}$$.
 - $$\gamma$$: discount factor for future rewards which allows us give future rewards less importance than the immediate reward.
 
