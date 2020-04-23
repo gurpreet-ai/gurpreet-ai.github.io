@@ -53,28 +53,28 @@ Markov Decision Processes (fully observable environment and control over the sta
 - $$R(s, a, s_{t+1})$$: $$S \times A \rightarrow R$$: reward function which gives us a reward for taking action $$a$$ in state $$s$$ and ending up in $$s_{t+1}$$.
 - $$\gamma$$: discount factor for future rewards which allows us give future rewards less importance than the immediate reward.
 
-The image below shows a MDP. We have three states $$(S_{0}, S_{1}, S_{2})$$, two possible action in each state $$(a_{0}, a_{1})$$, probability transition matrix, two rewards ($$-1$$ from taking $$a_1$$ from $$s_2$$ and ending up in $$S_0$$, $$+5$$ from taking $$a_0$$ from $$S_1$$ and going to $$S_0$$). The $$\gamma$$ in this case can be $1$. Notice all action probabilities from each state sum to $$1$$.
+The image below shows a MDP. We have three states $$(S_{0}, S_{1}, S_{2})$$, two possible action in each state $$(a_{0}, a_{1})$$, probability transition matrix, two rewards ($$-1$$ from taking $$a_1$$ from $$S_2$$ and ending up in $$S_0$$, $$+5$$ from taking $$a_0$$ from $$S_1$$ and going to $$S_0$$). The $$\gamma$$ in this case can be $$1$$. Notice all action probabilities from each state sum to $$1$$.
 
 ![MDP1]
 
 [MDP1]: https://1.bp.blogspot.com/-O__4eGY-qNo/XqIYFywWhrI/AAAAAAAAJRQ/lCoKe2-WAvILsXGmhhswZfnCxWmZQXh4QCLcBGAsYHQ/s1600/MDP.png
 
-The **goal in reinforcement learning** is to learn how to act in a MDP to spend more time in more valuable states so you get high rewards. We can do this by finding an **optimal policy** $\bar{\pi}$ which tells us how to act in a particular state to maximize reward. Policies can be stochastic or deterministic. 
+The **goal in reinforcement learning** is to learn how to act in a MDP to spend more time in more valuable states so you get high rewards. We can do this by finding an **optimal policy** $$\bar{\pi}$$ which tells us how to act in a particular state to maximize reward. Policies can be stochastic or deterministic. 
 - **Deterministic policies** are used in environment where for every state you have a clear defined action you will take. 
 - **Stochastic policies** are used in environment where for every state, for you to take an action, you draw a sample from possible actions that follow a distribution.
 
 **We will take more about policies in the next article.** For now, consider it an oracle which tells you which action is best for you in each state to maximize your reward.
 
-Once we know the optimal policy or a policy, we take actions by following the **policy** denoted by $\pi(a | s)$. Given a policy $\pi$, an MDP proceeds as follows:
+Once we know the optimal policy or a policy, we take actions by following the **policy** denoted by $$\pi(a | s)$$. Given a policy $$\pi$$, an MDP proceeds as follows:
 
-$s^{(0)} \rightarrow^{a(0)} s^{(1)} \rightarrow^{a(1)} s^{(2)} \rightarrow^{a(2)} ...  \rightarrow^{a(H-1)} s^{H}$  
+$$s^{(0)} \rightarrow^{a(0)} s^{(1)} \rightarrow^{a(1)} s^{(2)} \rightarrow^{a(2)} ...  \rightarrow^{a(H-1)} s^{H}$$
 
-We take action $a(0)$ in state $s(0)$ and end up in state $s(1)$. We have a reward $r$ associated with taking action $a(0)$. When we reach the desired state $s^H$ or finished taking all the actions, we have completed an **episode**.
+We take action $$a(0)$$ in state $$s(0)$$ and end up in state $$s(1)$$. We have a reward $$r$$ associated with taking action $$a(0)$$. When we reach the desired state $$s^H$$ or finished taking all the actions, we have completed an **episode**.
 
-The total accumulated rewards for taking action $a(0)$ from the first state $s(0)$ up until taking the last action $a(H-1)$ to end up in the last state $s(H)$ is given by:
+The total accumulated rewards for taking action $$a(0)$$ from the first state $$s(0)$$ up until taking the last action $$a(H-1)$$ to end up in the last state $$s(H)$$ is given by:
 
-Total Discounted Reward = $\gamma^{0} R(s^{(0)}, a^{(0)}, s^{(1)}) + \gamma^{1} R(s^{(1)}, a^{(1)}, s^{(2)}) + \gamma^{2} R(s^{(2)}, a^{(2)}, s^{(3)}) + ... +\gamma^{H-1}R(s^{(H-1)}, a^{(H-1)}, s^{(H)})$
+Total Discounted Reward = $$\gamma^{0} R(s^{(0)}, a^{(0)}, s^{(1)}) + \gamma^{1} R(s^{(1)}, a^{(1)}, s^{(2)}) + \gamma^{2} R(s^{(2)}, a^{(2)}, s^{(3)}) + ... +\gamma^{H-1}R(s^{(H-1)}, a^{(H-1)}, s^{(H)})$$
 
-The discount factor penalizes the rewards in the future because future rewards have higher uncertainty. The $\gamma$ value is between $[0, 1]$.
+The discount factor penalizes the rewards in the future because future rewards have higher uncertainty. The $$\gamma$$ value is between $$[0, 1]$$.
 
 Go the next article to learn about how to solve MDPs.
