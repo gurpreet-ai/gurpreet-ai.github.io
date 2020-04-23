@@ -49,7 +49,7 @@ In reinforcement learning, we will control over the state transitions, and may o
 Markov Decision Processes (fully observable environment and control over the state transitions) is a directed graph which has states for nodes and edges which describe transitions between states. All states in MDPs satisfy the Markov property. It is defined by 5-tuple $$(S, A, P(s_{t+1} | s, a), R(s, a, s_{t+1}), \gamma)$$:
 - $$S$$: finite set of possible states.
 - $$A$$: finite set of possible actions.
-- $$P(s_{t+1} | s, a)$$: probability distribution over next state given current state, and taking action.
+- $$P(s_{t+1} \vert s, a)$$: probability distribution over next state given current state, and taking action.
 - $$R(s, a, s_{t+1})$$: $$S \times A \rightarrow R$$: reward function which gives us a reward for taking action $$a$$ in state $$s$$ and ending up in $$s_{t+1}$$.
 - $$\gamma$$: discount factor for future rewards which allows us give future rewards less importance than the immediate reward.
 
@@ -65,7 +65,7 @@ The **goal in reinforcement learning** is to learn how to act in a MDP to spend 
 
 **We will take more about policies in the next article.** For now, consider it an oracle which tells you which action is best for you in each state to maximize your reward.
 
-Once we know the optimal policy or a policy, we take actions by following the **policy** denoted by $$\pi(a | s)$$. Given a policy $$\pi$$, an MDP proceeds as follows:
+Once we know the optimal policy or a policy, we take actions by following the **policy** denoted by $$\pi(a \vert s)$$. Given a policy $$\pi$$, an MDP proceeds as follows:
 
 $$s^{(0)} \rightarrow^{a(0)} s^{(1)} \rightarrow^{a(1)} s^{(2)} \rightarrow^{a(2)} ...  \rightarrow^{a(H-1)} s^{H}$$
 
