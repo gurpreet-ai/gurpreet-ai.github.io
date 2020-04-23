@@ -7,7 +7,7 @@ date:   2020-04-22 12:00:00
 Reinforcement learning is currently one of the most active areas of research in artificial intelligence because of its combination with deep learning makes it possible to solve complex and challenging problems with high dimentional state-space. In this series of articles, I will dive into the area of deep reinforcement learning. But before I talk about it, I need to make sure you understand basic concepts in reinforcement learning and deep learning.
 
 # Series Goal
-The goal of this series is to give the reader an introduction to deep reinforcement learning, skills on how to create deep RL models using pytorch and deep RL algorithms.
+The goal of this series is to give the reader an introduction to deep reinforcement learning, skills on how to create deep RL models using pytorch and learn deep RL algorithms.
 
 # Article Goal
 The goal of this article is to explain what is reinforcement learning (RL), how to formulate a RL problem, types of RL methods, and finally what is deep learning and how it has been combined with RL to create deep reinforcement learning.
