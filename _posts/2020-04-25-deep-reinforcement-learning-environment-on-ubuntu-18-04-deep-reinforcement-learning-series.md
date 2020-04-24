@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Deep Reinforcement Learning Environment on Ubuntu 18.04 - Deep Reinforcement Learning Series"
-date:   2020-04-22 12:00:00
+date:   2020-04-25 12:00:00
 ---
 
 
@@ -38,21 +38,23 @@ To install PyTorch via Anaconda, use the following conda command:
 
 1. conda install pytorch torchvision -c pytorch
 
-Step 3: Install OpenAI Gym Package
+Step 4: Install OpenAI Gym Package
 
 1. git clone https://github.com/openai/gym
 2. cd gym
 3. pip install -e .
 
-To Test it all:
+Step 5: To Test it all:
 
 1. Open Terminal and run python
 2. Run the following code:
 
-> import torch
-> print(torch.__version__)
+```python
+import torch
+print(torch.__version__)
 
->import gym
+import gym
 print(gym.__version__)
+```
 
-3. If the code is successful and you see the version of both torch and gym, you have successfully installed the software required for Deep Reinforcement Learning Environment on Ubuntu 18.04.
+If the code is successful and you see the version of both torch and gym, you have successfully installed the software required for Deep Reinforcement Learning Environment on Ubuntu 18.04.

@@ -14,12 +14,13 @@ After we derive the state value function, $$V(s)$$ and the action value function
 - The optimal state value function, $$v_*(s) = max_{\pi} v_{\pi}(s)$$, is the maximum value function over all policies.
 - The optimal action-value function, $$q_*(s, a) = max_{\pi} a_{\pi}(s, a)$$, is the maximum action-value function over all policies
 
-
 ## Topics
 - [1. Rewards](#1-rewards)
 - [2. Policy](#2-policy)
 - [3. Transition Probability Distribution and Expected Reward](#3-transition-probability-distribution-and-expected-reward)
-- [4. Bellman Equation for the state value function, $$V(s)$$](#4-bellman-equation)
+- [4. Bellman Equation for State Value function, $$V(s)$$](#4-bellman-equation-state-value-function)
+- [5. Bellman Equation for State-Action Value function, $$V(s)$$](#5-bellman-equation-state-action-value-function)
+- [6. Optimal Bellman Equation](#6-optimal-bellman-equation)
 
 ## 1. Rewards
 
@@ -59,7 +60,7 @@ Probability distribution for each choice of $$s$$ and $$a$$ sum to 1.
 
 $$ \Sigma_{s' \in S} \: \Sigma_{r \in R} \ p(s', r, \vert s, a) = 1$$
 
-The expected reward that we receive when starting in state $$s$$, taking action $$a$$, and moving into state $$s'$$ (state–action–next-state triples) is given by:
+The expected reward that we receive when starting in state $$s$$, taking action $$a$$, and moving into state $$s'$$ (state–action–next-state triples) is written as:
 
 $$  r(s, a, s') = \mathbb{E}[R_{t} \vert S_{t-1} = s, A_{t-1} = a, S_{t} = s']$$
 
@@ -77,21 +78,21 @@ We can pull out the first reward from the sum inside the expectation:
 
 $$V^{\pi}(s) = \mathop{\mathbb{E}}_{\pi} [R_{t+1} + \gamma \Sigma_{k=0}^{\infty}{\gamma^{k}r_{t+k+2}} \vert S_t = s ]$$
 
-or 
+Replace the summation inside:
 
 $$V^{\pi}(s) = \mathop{\mathbb{E}}_{\pi} [R_{t+1} + \gamma G_{t+1} \vert S_t = s ]$$
 
-This expectation means what we expect to be if we continue from state $$s$$ following some policy. We can split this expectation into two expectations.
+This expectation means what we expect the reward to be if we continue from state $$s$$ following some policy. We can split this expectation into two expectations since it's addition. We can combine them after we compute each expecatation.
 
 $$\mathop{\mathbb{E}}_{\pi} [R_{t+1} \vert S_t = s ]$$
 
 $$\mathop{\mathbb{E}}_{\pi} [\gamma G_{t+1} \vert S_t = s ]$$
 
-Now we will get the individual expectations and then combine them afterwards. The first expectation:
+The first expectation:
 
 $$\mathop{\mathbb{E}}_{\pi} [R_{t+1} \vert S_t = s ]  = \Sigma_a \ \pi(s, a) \ \Sigma_{s'} \ p(s', r, \vert s, a) \ r(s, a, s') \ $$
 
-That is the expectation of reward at time $$t + 1$$ given state $$s$$, which is the reward over all actions the agent can take and end up in all the possible new states which have a transition probability and a reward associated with it. Simply, we are summing over all possible actions and all possible returned states.
+That is the expectation of reward at time $$t + 1$$ given state $$s$$, which is the reward over all actions the agent can take and end up in all the possible new states which have a transition probability and a reward associated with it. Simply, we are summing over all possible actions and all possible returned states that we may end up in, and the reward for going into those states.
 
 The second expectation:
 
@@ -120,7 +121,55 @@ $$V^{\pi}(s) = \mathop{\mathbb{E}}_{\pi} [R_{t+1} + \gamma G_{t+1} \vert S_t = s
 $$V^{\pi}(s) = \Sigma_a \ \pi(s, a) \ \Sigma_{s'} \ p(s', r, \vert s, a) \ [r(s, a, s') \ + \ \gamma \ V^{\pi}(s')] $$
 
 
-## 5. Optimal State Value Function, $$V(s)$$
+## 5. Bellman Equation for State-Action Value function
+
+We can compute the state-action value function similarly.
+
+$$Q^{\pi}(s, a) = \mathop{\mathbb{E}}_{\pi} [G_t \vert S_t = s, A_t = a]$$
+
+$$Q^{\pi}(s) = \mathop{\mathbb{E}}_{\pi} [G_t = \gamma^{0} r_{t+1} + \gamma^{1} r_{t+2} + \gamma^{2} r_{t+3} + \gamma^{3} r_{t+4} + ... \vert S_t = s, A_t = a]$$
+
+$$Q^{\pi}(s, a) = \mathop{\mathbb{E}}_{\pi} [\Sigma_{k=0}^{\infty}{ \ \gamma^{k}r_{t+k+1}} \vert S_t = s, A_t = a]$$
+
+Take the first reward out of the summation:
+
+$$Q^{\pi}(s, a) = \mathop{\mathbb{E}}_{\pi} [R_{t+1} + \gamma \ \Sigma_{k=0}^{\infty}{\gamma^{k}r_{t+k+2}} \vert S_t = s, A_t = a]$$
+
+We can separate the two expectations:
+
+$$\mathop{\mathbb{E}}_{\pi} [R_{t+1} \ \vert \ S_t = s, A_t = a]$$
+
+$$\mathop{\mathbb{E}}_{\pi} [\gamma \ \Sigma_{k=0}^{\infty}{\gamma^{k}r_{t+k+2}} \ \vert \ S_t = s, A_t = a]$$
+
+The first expectation:
+
+$$\mathop{\mathbb{E}}_{\pi} [r_{t+1} \ \vert \ S_t = s, A_t = a]  = \Sigma_{s'} \ p(s', r, \ \vert \ s, a) \ r(s, a, s') \ $$
+
+The second expectation:
+
+$$\mathop{\mathbb{E}}_{\pi} [\gamma \ \Sigma_{k=0}^{\infty}{\gamma^{k}r_{t+k+2}} \ \vert \ S_t = s, A_t = a]$$
+
+can also be written as:
+
+$$\mathop{\mathbb{E}}_{\pi} [\gamma \ G_t \ \vert \ S_t = s, A_t = a]$$
+
+We take the gamma out of the expectation to make things simple for now:
+
+$$\gamma \ \mathop{\mathbb{E}}_{\pi} [G_t \ \vert \ S_t = s, A_t = a]$$
+
+$$\mathop{\mathbb{E}}_{\pi} [G_t \ \vert \ S_t = s, A_t = a]\ =  \Sigma_{s'} \ p(s', r, \ \vert \ s, a) \ \ \Sigma_{a'} \ \pi(s', a') \ \mathop{\mathbb{E}}_{\pi} [G_{t+1} \ \vert \ S_{t+1} = s', A_t = a'] $$
+
+The second expectation is given by:
+
+$$\mathop{\mathbb{E}}_{\pi} [\gamma \ G_t \ \vert \ S_t = s, A_t = a]\ =  \Sigma_{s'} \ p(s', r, \ \vert \ s, a) \ \gamma \ \Sigma_{a'} \ \pi(s', a') \ \mathop{\mathbb{E}}_{\pi} [G_{t+1} \ \vert \ S_{t+1} = s', A_t = a'] $$
+
+Combining both expectations:
+
+$$Q^{\pi}(s, a) = \Sigma_{s'} \ p(s', r, \ \vert \ s, a) \ [r(s, a, s') \ + \ \gamma \ \Sigma_{a'} \ \pi(s', a') \ \mathop{\mathbb{E}}_{\pi} [G_{t+1} \ \vert \ S_{t+1} = s', A_t = a'] ] $$
+
+$$Q^{\pi}(s, a) = \Sigma_{s'} \ p(s', r, \ \vert \ s, a) \ [r(s, a, s') \ + \ \gamma \ \Sigma_{a'} \ \pi(s', a') \ Q(s', a')] $$
+
+## 6. Optimal Bellman Equation
 
 We know now how to make a decision on what action to take if an agent is in a particular state using a policy. Some policies may perform better than other policies and vice versa. Remember in reinforcement learning, our goal is to maximize reward over a period of time that it takes for an agent to complete some task using some policy.
 
@@ -130,12 +179,22 @@ The optimal state value function is written as $$v^{*}(s)$$. It is given by:
 
 $$v^*(s) = max_{\pi} \ v_{\pi} (s)$$
 
-This is the **Bellman Optimality Equation** for State Value function.
+This is the **Bellman Optimality Equation** $$v_*(s)$$ for State Value function.
 
-Intuitively, the Bellman optimality equation should output a value for a state under an optimal policy that must equal the expected return for the best action from that state:
+Intuitively, the Bellman optimality equation should output a value for a state under an optimal policy that must equal the expected return for the best action from that state.
 
-$$v^*(s) = V^{\pi_*}(s) $$
+$$v^*(s) = max_{a \in A} \ q_{\pi_*}(s, a)$$
 
-$$v^*(s) = max_{a}  \mathop{\mathbb{E}}_{\pi_*} [R_{t+1} + \gamma G_{t+1} \vert S_t = s ]$$
+$$v^*(s) = max_{a \in A}  \mathop{\mathbb{E}}_{\pi_*} [G_t \ \vert \ S_t = s, A_t = a]$$
 
+$$v^*(s) = max_{a \in A}  \mathop{\mathbb{E}}_{\pi_*} [R_{t+1} + \gamma G_{t+1}\ \vert \ S_t = s, A_t = a]$$
 
+$$v^*(s) = max_{a \in A}  \mathop{\mathbb{E}}_{\pi_*} [R_{t+1} + \gamma v_*(S_{t+1}) \ \vert \ S_t = s, A_t = a]$$
+
+$$v^*(s) = max_{a \in A}  \Sigma p(s', r \ \vert \ s, a)[r + \gamma v_*(s')]$$
+
+The Bellman optimality equation for $$q_*(s)$$ State-Action Value function is:
+
+$$q_*(s, a) = \mathop{\mathbb{E}} [R_{t+1} + \gamma \ max_{a \in A} \ q_* (S_{t+1}, a') \ \vert \ S_t = s, A_t = a]$$
+
+$$q_*(s, a) = \Sigma_{s', r} \ p(s', r \ \vert \ s, a) [r + \gamma \ max_{a'}  \ q_*(s', a')$$

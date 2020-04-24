@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Markov Decision Processes (MDPs) - Deep Reinforcement Learning Series"
-date:   2020-04-22 12:00:00
+date:   2020-04-23 12:00:00
 ---
 
 
