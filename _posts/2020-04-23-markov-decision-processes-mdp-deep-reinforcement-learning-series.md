@@ -46,14 +46,21 @@ In reinforcement learning, we will control over the state transitions, and may o
 
 ## 3. Markov Decision Processes (MDPs)
 
-Markov Decision Processes (fully observable environment and control over the state transitions) is a directed graph which has states for nodes and edges which describe transitions between states. All states in MDPs satisfy the Markov property. It is defined by 5-tuple $$(S, A, P(s_{t+1} | s, a), R(s, a, s_{t+1}), \gamma)$$:
+Markov Decision Processes (fully observable environment and control over the state transitions) is a directed graph which has states for nodes and edges which describe transitions between states. All states in MDPs satisfy the Markov property. It is defined by 5-tuple $$(S, A, P(s_{t+1} \vert s, a), R(s, a, s_{t+1}), \gamma)$$:
 - $$S$$: finite set of possible states.
 - $$A$$: finite set of possible actions.
-- $$P(s_{t+1} \vert s, a)$$: probability distribution over next state given current state, and taking action.
+- $$P(s_{t+1} \vert s, a)$$: $$S \times A \rightarrow P$$ probability distribution over next state given current state $$s$$, and taking action $$a$$.
 - $$R(s, a, s_{t+1})$$: $$S \times A \rightarrow R$$: reward function which gives us a reward for taking action $$a$$ in state $$s$$ and ending up in $$s_{t+1}$$.
 - $$\gamma$$: discount factor for future rewards which allows us give future rewards less importance than the immediate reward.
 
-The image below shows a MDP. We have three states $$(S_{0}, S_{1}, S_{2})$$, two possible action in each state $$(a_{0}, a_{1})$$, probability transition matrix, two rewards ($$-1$$ from taking $$a_1$$ from $$S_2$$ and ending up in $$S_0$$, $$+5$$ from taking $$a_0$$ from $$S_1$$ and going to $$S_0$$). The $$\gamma$$ in this case can be $$1$$. Notice all action probabilities from each state sum to $$1$$.
+The image below shows a MDP. We have:
+- Three states $$(S_{0}, S_{1}, S_{2})$$
+- Two possible action in each state $$(a_{0}, a_{1})$$, 
+- Probability transition matrix describing the probability of ending up in a state if action is performed in a state, 
+- Two rewards ($$-1$$ from taking $$a_1$$ from $$S_2$$ and ending up in $$S_0$$, $$+5$$ from taking $$a_0$$ from $$S_1$$ and going to $$S_0$$). 
+- $$\gamma$$ in this case can be $$1$$. 
+
+Notice all probabilities of ending up in some state after taking action sum to $$1$$.
 
 ![MDP1]
 
@@ -73,7 +80,8 @@ We take action $$a(0)$$ in state $$s(0)$$ and end up in state $$s(1)$$. We have 
 
 The total accumulated rewards for taking action $$a(0)$$ from the first state $$s(0)$$ up until taking the last action $$a(H-1)$$ to end up in the last state $$s(H)$$ is given by:
 
-Total Discounted Reward = $$\gamma^{0} R(s^{(0)}, a^{(0)}, s^{(1)}) + \gamma^{1} R(s^{(1)}, a^{(1)}, s^{(2)}) + \gamma^{2} R(s^{(2)}, a^{(2)}, s^{(3)}) + ... +\gamma^{H-1}R(s^{(H-1)}, a^{(H-1)}, s^{(H)})$$
+Total Discounted Reward (TDR) is given by
+$$TDR = \gamma^{0} R(s^{(0)}, a^{(0)}, s^{(1)}) + \gamma^{1} R(s^{(1)}, a^{(1)}, s^{(2)}) + \gamma^{2} R(s^{(2)}, a^{(2)}, s^{(3)}) + ... +\gamma^{H-1}R(s^{(H-1)}, a^{(H-1)}, s^{(H)})$$
 
 The discount factor penalizes the rewards in the future because future rewards have higher uncertainty. The $$\gamma$$ value is between $$[0, 1]$$.
 
