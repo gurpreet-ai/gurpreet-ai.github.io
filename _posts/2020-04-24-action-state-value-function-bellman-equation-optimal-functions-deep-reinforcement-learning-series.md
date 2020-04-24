@@ -18,7 +18,8 @@ After we derive the state value function, $$V(s)$$ and the action value function
 ## Topics
 - [1. Rewards](#1-rewards)
 - [2. Policy](#2-policy)
-- [3. Bellman Equations](#3-bellman-equation)
+- [3. Transition Probability Distribution and Expected Reward](#3-transition-probability-distribution-and-expected-reward)
+- [4. Bellman Equation for the state value function, $$V(s)$$](#4-bellman-equation)
 
 ## 1. Rewards
 
@@ -48,20 +49,21 @@ The  **action value function**  $$Q(s, a)$$ describes the value of taking an act
 
 $$Q^{\pi}(s, a) = \mathop{\mathbb{E}}_{\pi} [G_t \vert s_t = s, a_t = a]$$
 
-## 3. Bellman Equations
+## 3. Transition Probability Distribution and Expected Reward
 
 To derive the bellman equations, we need to define some useful notation. In finite MDP, the set of states, actions, and rewards all have a finite number of elements, therefore we have a well defined discrete transition probability distributions dependent only on the preceding state and action. The **transition probability distribution**  if we start in state $$s$$, and take action $$a$$, we end up in new state $$s' \in S$$ with a reward $$r \in R$$ is given by:
 
 $$ p(s', r, \vert s, a) = Pr(S_t = s', R_t = r | S_{t-1} = s, A_{t-1} = a)$$
 
-Probability distribution for each choice of $s$ and $a$ sum to 1.
+Probability distribution for each choice of $$s$$ and $$a$$ sum to 1.
+
 $$ \Sigma_{s' \in S} \: \Sigma_{r \in R} \ p(s', r, \vert s, a) = 1$$
 
 The expected reward that we receive when starting in state $$s$$, taking action $$a$$, and moving into state $$s'$$ (state–action–next-state triples) is given by:
 
 $$  r(s, a, s') = \mathbb{E}[R_{t} \vert S_{t-1} = s, A_{t-1} = a, S_{t} = s']$$
 
-### Bellman Equation for the state value function, V(state)
+## 4. Bellman Equation for the State Value Function, $$V(s)$$
 
 Now, we will derive the bellman equation for the state value function, **V(state)**. Remember that the value function of a state $$s$$ under a policy $$\pi$$, denoted $$v_{\pi}$$, is the expected return when starting in $$s$$, and following $$\pi$$ thereafter. We can rewrite the state value function equation from earlier as:
 
@@ -116,3 +118,24 @@ We can combine the two expectations and get the final form of the Bellman Equati
 $$V^{\pi}(s) = \mathop{\mathbb{E}}_{\pi} [R_{t+1} + \gamma G_{t+1} \vert S_t = s ]$$
 
 $$V^{\pi}(s) = \Sigma_a \ \pi(s, a) \ \Sigma_{s'} \ p(s', r, \vert s, a) \ [r(s, a, s') \ + \ \gamma \ V^{\pi}(s')] $$
+
+
+## 5. Optimal State Value Function, $$V(s)$$
+
+We know now how to make a decision on what action to take if an agent is in a particular state using a policy. Some policies may perform better than other policies and vice versa. Remember in reinforcement learning, our goal is to maximize reward over a period of time that it takes for an agent to complete some task using some policy.
+
+So we need to find an optimal policy and that will give us the highest reward. Optimal policies can be denoted by $$\pi^*$$.
+
+The optimal state value function is written as $$v^{*}(s)$$. It is given by:
+
+$$v^*(s) = max_{\pi} \ v_{\pi} (s)$$
+
+This is the **Bellman Optimality Equation** for State Value function.
+
+Intuitively, the Bellman optimality equation should output a value for a state under an optimal policy that must equal the expected return for the best action from that state:
+
+$$v^*(s) = V^{\pi_*}(s) $$
+
+$$v^*(s) = max_{a}  \mathop{\mathbb{E}}_{\pi_*} [R_{t+1} + \gamma G_{t+1} \vert S_t = s ]$$
+
+
