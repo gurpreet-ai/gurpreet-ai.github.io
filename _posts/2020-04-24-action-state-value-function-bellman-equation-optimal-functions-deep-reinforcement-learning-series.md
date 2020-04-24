@@ -14,10 +14,9 @@ After we derive the state value function, $$V(s)$$ and the action value function
 - The optimal state value function, $$v_*(s) = max_{\pi} v_{\pi}(s)$$, is the maximum value function over all policies.
 - The optimal action-value function, $$q_*(s, a) = max_{\pi} a_{\pi}(s, a)$$, is the maximum action-value function over all policies
 
+
 ## Topics
 - [1. Rewards](#1-rewards)
-- [2. Policy](#2-policy)
-- [3. Bellman Equations](#3-bellman-equations)
 
 ## 1. Rewards
 
@@ -39,13 +38,41 @@ Our goal is to learn an optimal policy which tells us how to act to maximize ret
 
 To learn the optimal policy, we have to make use of the  **state value function V(state)**, and the  **action value function Q(state, action)**.
 
-The  **state value function** $$V^{\pi}(s)$$  describes the value of a state when following a policy. It is the expected return when starting in state s and acting according to our policy. The state value function equation is given by:
+The  **state value function** $$V^{\pi}(s)$$  describes the value of a state when following a policy. It is the expected return when starting in state $$s$$ and acting according to our policy. The state value function equation is given by:
 
 $$V^{\pi}(s) = \mathop{\mathbb{E}}_{\pi} [R_t \vert s_t = s]$$
 
-The  **action value function**  _Q(state, action)_ describes the value of taking an action in some state when following a policy. It is the expected return given the state and action under a policy:
+The  **action value function**  $$Q(s, a)$$ describes the value of taking an action in some state when following a policy. It is the expected return given the state and action under a policy:
 
 $$Q^{\pi}(s, a) = \mathop{\mathbb{E}}_{\pi} [R_t \vert s_t = s, a_t = a]$$
 
 ## 3. Bellman Equations
+
+To derive the bellman equations, we need to define some useful notation. The **transition probability distribution**  is given by if we start in state $$s$$, and take action $$a$$, we end up in new state $$s'$$.
+
+$$ P^{a}_{ss'} = P(s_{t+1} = s' | s_t = s, a_t = a)$$
+
+The expected reward that we receive when starting in state $$s$$, taking action $$a$$, and moving into state $$s'$$ is given by:
+
+$$  R^{a}_{ss'} = \mathbb{E}[r_{t+1} \vert s_t = s, s_{t+1} = s', a_t = a] $$
+
+### Bellman Equation for the state value function, V(state)
+
+Now, we will derive the bellman equation for the state value function, **V(state)**. We can rewrite the state value function equation from earlier as:
+
+$$V^{\pi}(s) = \mathop{\mathbb{E}}_{\pi} [R_t \vert s_t = s]$$
+
+$$V^{\pi}(s) = \mathop{\mathbb{E}}_{\pi} [R_t = \gamma^{0} r_{t+1} + \gamma^{1} r_{t+2} + \gamma^{2} r_{t+3} + \gamma^{3} r_{t+4} + ... \vert s_t = s]$$
+
+$$V^{\pi}(s) = \mathop{\mathbb{E}}_{\pi} [\Sigma_{k=0}^{\infty}{\gamma^{k}r_{t+k+1}} \vert s_t = s ]$$
+
+We can pull out the first reward from the sum inside the expectation:
+
+$$V^{\pi}(s) = \mathop{\mathbb{E}}_{\pi} [r_{t+1} + \gamma \Sigma_{k=0}^{\infty}{\gamma^{k}r_{t+k+2}} \vert s_t = s ]$$
+
+This expectation means what we expect to be if we continue from state $$s$$ following some policy. We can split this expectation into two expectations.
+
+$$\mathop{\mathbb{E}}_{\pi} [r_{t+1} \vert s_t = s ]$$
+
+$$\mathop{\mathbb{E}}_{\pi} [\gamma \Sigma_{k=0}^{\infty}{\gamma^{k}r_{t+k+2}} \vert s_t = s ]$$
 
