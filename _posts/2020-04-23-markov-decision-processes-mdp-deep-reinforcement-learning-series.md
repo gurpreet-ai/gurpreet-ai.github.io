@@ -55,10 +55,10 @@ Markov Decision Processes (fully observable environment and control over the sta
 
 The image below shows a MDP. We have:
 - Three states $$(S_{0}, S_{1}, S_{2})$$
-- Two possible action in each state $$(a_{0}, a_{1})$$, 
-- Probability transition matrix describing the probability of ending up in a state if action is performed in a state, 
-- Two rewards ($$-1$$ from taking $$a_1$$ from $$S_2$$ and ending up in $$S_0$$, $$+5$$ from taking $$a_0$$ from $$S_1$$ and going to $$S_0$$). 
-- $$\gamma$$ in this case can be $$1$$. 
+- Two possible action in each state $$(a_{0}, a_{1})$$
+- Probability transition matrix describing the probability of ending up in a state if action is performed in a state
+- Two rewards ($$-1$$ from taking $$a_1$$ from $$S_2$$ and ending up in $$S_0$$, $$+5$$ from taking $$a_0$$ from $$S_1$$ and going to $$S_0$$)
+- $$\gamma$$ in this case can be $$1$$
 
 Notice all probabilities of ending up in some state after taking action sum to $$1$$.
 
