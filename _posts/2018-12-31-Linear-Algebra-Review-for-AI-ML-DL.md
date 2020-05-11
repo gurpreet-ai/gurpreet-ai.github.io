@@ -19,8 +19,7 @@ date:   2018-12-31 12:00:00
 - [12. Inverse](#12-inverse)
 - [13. Norms](#13-norms)
 - [14. Rank](#14-rank)
-- [15. Diagonalization](#15-diagonalization)
-- [16. Singular Value Decomposition (SVD)](#16-singular-value-decomposition)
+- [15. Singular Value Decomposition (SVD)](#15-singular-value-decomposition)
 
 ## 1. Matrices and Vectors
 Matrices are 2-dimensional arrays. The matrix below has four rows and three columns, so it is a 4 x 3 matrix. 
@@ -367,14 +366,13 @@ All three norms presented above are examples of the family of $$l_p$$ norms, whi
 
 Norms can also be defined for matrices, such as the **Frobenius norm**.
 
-## 12. Rank
-This is where I talk about Rank.
+## 14. Rank
 
-## 13. Diagonalization
-This is where I talk about diagonalization.
+The rank of a matrix is the estimate of the number of linearly independent rows or columns in
+a matrix denoted as the function rank(). Intuitively, you can consider it the number of dimensions spanned by all of the vectors within a matrix. A rank of 0 suggest all vectors span a point, a rank of 1 suggests all vectors span a line, a rank of 2 suggests all vectors span a two-dimensional plane and so on.
 
-## 14. Singular Value Decomposition (SVD)
-This is where I talk about the SVD.
+The rank is estimated numerically, often using a matrix decomposition method. A common approach is to use the Singular-Value Decomposition (SVD).
 
-## 15. Matrix Calculus
-This is where I talk about the matrix calculas.
+## 15. Singular Value Decomposition (SVD)
+
+Matrix decomposition, AKA matrix factorization, involves describing a given matrix using its constituent elements. All matrices have an SVD. This makes it more stable than other methods, such as the eigendecomposition. Applications include compressing, denoising, and data reduction.
