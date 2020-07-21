@@ -19,7 +19,13 @@ date:   2018-12-31 12:00:00
 - [12. Inverse](#12-inverse)
 - [13. Norms](#13-norms)
 - [14. Rank](#14-rank)
-- [15. Singular Value Decomposition (SVD)](#15-singular-value-decomposition)
+- [15. Sparse Matrices](#15-sparse-matrices)
+- [16. Matrix Decompositions](#16-matrix-decomposition)
+- [17. LU Decompositions](#17-lu-decomposition)
+- [18. QR Decompositions](#18-qr-decomposition)
+- [19. Cholesky Decompositions](#19-cholesky-decomposition)
+- [20. Eigen Decompositions](#20-eigen-decomposition)
+- [21. Singular Value Decomposition (SVD)](#21-singular-value-decomposition)
 
 ## 1. Matrices and Vectors
 Matrices are 2-dimensional arrays. The matrix below has four rows and three columns, so it is a 4 x 3 matrix. 
@@ -373,6 +379,24 @@ a matrix denoted as the function rank(). Intuitively, you can consider it the nu
 
 The rank is estimated numerically, often using a matrix decomposition method. A common approach is to use the Singular-Value Decomposition (SVD).
 
-## 15. Singular Value Decomposition (SVD)
+## 15. Sparse Matrices
+
+Sparse Matrices are matrices that contain mostly zero values. Large sparse matrices are common in general. It is computationally expensive to represent and work with sparse matrices (Time and Space complexity). Much improvement in performance can be achieved by using representations and operations that specifically handle the matrix sparsity.
+
+The sparsity score is the number of zero values in the matrix divided by the total number of elements in the matrix.
+
+## 16. Matrix Decompositions
+
+## 17. LU Decomposition
+
+## 18. QR Decomposition
+
+## 19. Cholesky Decomposition
+
+## 20. Eigen Decomposition
+
+## 21. Singular Value Decomposition (SVD)
 
 Matrix decomposition, AKA matrix factorization, involves describing a given matrix using its constituent elements. All matrices have an SVD. This makes it more stable than other methods, such as the eigendecomposition. Applications include compressing, denoising, and data reduction.
+
+

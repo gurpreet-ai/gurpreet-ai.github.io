@@ -11,7 +11,7 @@ The goal of this series is to give the reader an introduction to deep reinforcem
 
 # Motivation to learn Deep Reinforcement Learning
 
-AlphaGo used reinforcement learning technique to beat Lee Sedol, a South Korean professional Go player, in the game of Go.
+AlphaGo used deep reinforcement learning techniques to beat Lee Sedol, a South Korean professional Go player, in the game of Go (more complex than chess because of the number of possible moves at each turn). Many applications in robotics swarm.
 
 # Article Goal
 The goal of this article is to explain what is reinforcement learning (RL), how to formulate a RL problem, types of RL methods, and finally what is deep learning and how it has been combined with RL to create deep reinforcement learning.
