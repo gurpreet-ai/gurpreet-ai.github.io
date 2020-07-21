@@ -20,7 +20,7 @@ If we have complete knowledge of the environment or all the MDP variables $$(S, 
 
 ## 2. Monte Carlo or MC Methods
 
-However, in most cases, we do not know the $$P(s_{t+1}, r \vert s, a)$$ and $$R(s, a, s_{t+1})$$, so we cannot solve MPDs by directly using the bellman equations. This is where Monte Carlo (MC) methods becomes helpful. MC methods are model-free and learns directly from episodes of experience without any prior knowledge of MDP transition function $$P(s',r|s,a)$$ and rewards function $$R(s,a)$$. However, this can only be applied to episodic MDPs because an episode has to terminate before we can calculate any returns. Here, we do not do an update estimates after every action, but rather after every episode. 
+However, in most cases, we do not know the $$P(s_{t+1}, r \vert s, a)$$ and $$R(s, a, s_{t+1})$$, so we cannot solve MPDs by directly using the bellman equations. This is where Monte Carlo (MC) methods becomes helpful. MC methods are model-free and learns directly from episodes of experience without any prior knowledge of MDP transition function $$P(s',r \vert s,a)$$ and rewards function $$R(s, a)$$. However, this can only be applied to episodic MDPs because an episode has to terminate before we can calculate any returns. Here, we do not do an update estimates after every action, but rather after every episode. 
 
 ## 3. Temporal-Difference or TD Learning
 
