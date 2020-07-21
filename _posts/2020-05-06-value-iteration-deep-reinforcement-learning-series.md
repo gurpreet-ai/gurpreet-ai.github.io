@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Value Iteration - Dynamic Programming Approach - Deep Reinforcement Learning Series"
-date:   2020-04-26 12:00:00
+date:   2020-05-06 12:00:00
 ---
 
 ## Article Goal
