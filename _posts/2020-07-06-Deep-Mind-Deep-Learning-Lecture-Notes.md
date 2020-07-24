@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "DeepMind x UCL | Deep Learning Lecture 1-10 Notes 2020"
+title:  "DeepMind x UCL | Deep Learning Lecture 1-12 Notes 2020"
 date:   2020-07-06 12:00:00
 ---
 

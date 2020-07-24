@@ -6,7 +6,7 @@ date:   2020-04-24 12:00:00
 
 ## Article Goal
 
-The bellman equation was derived by an American Mathematician by the name Richard Bellman to solve Markov Decision Processes (MDPs). In this article, my goal is to derive the Bellman equation for the state value function, $$V(s)$$ and the action value function, $$Q(s, a)$$. Most reinforcement learning algorithms are based on estimating value function (state value function or state-action value function). The value functions are functions of states (or of state–action pairs) that estimate how good it is for the agent to be in a given state (or how good it is to perform a given action in a given state).
+The bellman equation was derived by American mathematician Richard Bellman to solve Markov Decision Processes (MDPs). In this article, my goal is to derive the Bellman equation for the state value function, $$V(s)$$ and the action value function, $$Q(s, a)$$. **Most reinforcement learning algorithms are based on estimating value function** (state value function or state-action value function). The value functions are functions of states (or of state–action pairs) that estimate how good it is for the agent to be in a given state (or how good it is to perform a given action in a given state).
 - The state value function tells us the value for being in some state when following some policy. 
 - The action value function tells us the value of taking an action in some state when following a certain policy.
 
@@ -15,12 +15,12 @@ After we derive the state value function, $$V(s)$$ and the action value function
 - The optimal action-value function, $$q_*(s, a) = max_{\pi} a_{\pi}(s, a)$$, is the maximum action-value function over all policies
 
 ## Topics
-- [1. Rewards](#1-rewards)
-- [2. Policy](#2-policy)
-- [3. Transition Probability Distribution and Expected Reward](#3-transition-probability-distribution-and-expected-reward)
-- [4. Bellman Equation for State Value function, $$V(s)$$](#4-bellman-equation-state-value-function)
-- [5. Bellman Equation for State-Action Value function, $$V(s)$$](#5-bellman-equation-state-action-value-function)
-- [6. Optimal Bellman Equation](#6-optimal-bellman-equation)
+1. [Rewards](#1-rewards)
+2. [Policy](#2-policy)
+3. [Transition Probability Distribution and Expected Reward](#3-transition-probability-distribution-and-expected-reward)
+4. [Bellman Equation for State Value function, $$V(s)$$](#4-bellman-equation-state-value-function)
+5. [Bellman Equation for State-Action Value function, $$V(s)$$](#5-bellman-equation-state-action-value-function)
+6. [Optimal Bellman Equation](#6-optimal-bellman-equation)
 
 ## 1. Rewards
 

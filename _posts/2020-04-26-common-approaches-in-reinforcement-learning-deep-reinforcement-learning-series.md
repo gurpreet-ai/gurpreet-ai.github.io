@@ -9,10 +9,10 @@ date:   2020-04-26 12:00:00
 Before we dive into deep reinforcement learning, we should learn about the different approaches in reinforcement learning. In this article, we'll briefly talk about Dynamic Programming (DP), Monte Carlo (MC) Methods, Temporal-Difference (TD) Learning, and Policy Gradients (PG) methods. These approaches in reinforcement learning are important to understand before diving into deep reinforcement learning approaches.
 
 # Topics
-1. [Dynamic Programming or DP Methods](#dynamic-programming-or-dp-methods)
-2. [Monte Carlo or MC Methods](#monte-carlo-or-mc-methods)
-3. [Temporal-Difference or TD Learning](#temporal-difference-or-td-learning)
-4. [Policy Gradient or PG Methods](#policy-gradient-or-pg-methods)
+1. [Dynamic Programming or DP Methods](#1-dynamic-programming-or-dp-methods)
+2. [Monte Carlo or MC Methods](#2-monte-carlo-or-mc-methods)
+3. [Temporal-Difference or TD Learning](#3-temporal-difference-or-td-learning)
+4. [Policy Gradient or PG Methods](#4-policy-gradient-or-pg-methods)
 
 ## 1. Dynamic Programming or DP Methods
 
