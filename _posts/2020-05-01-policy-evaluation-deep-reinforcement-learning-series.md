@@ -49,12 +49,16 @@ print("\nFrozenLake-v0 Env")
 env.render()
 ```
 
+The code above simple uses the FrozenLake v0 Env from the gym package. The env is a 4x4 grid meaning we have 16 states and we have 4 actions (Up, Down, Left, Right). Starting state (S), goal state (G), avoid holes (H), walk only on frozen tiles (F).
+
+**OUTPUT**
+
     N states (4x4): 16
     M actions (U, D, L, R): 4
     
     FrozenLake-v0 Env
     
-    [41mS[0mFFF
+    SFFF
     FHFH
     FFFH
     HFFG
@@ -94,7 +98,7 @@ def policy_evaluation(env, policy, gamma, theta, state_values):
     @param env:       		OpenAI Gym environment
     @param policy:    		policy matrix containing actions and their probability in each state
     @param gamma:     		discount factor
-    @param threshold: 		the evaluation will stop once values for all states are less than the threshold
+    @param theta: 		    evaluation will stop once values for all states are less than theta
     @param state_values: 	initial state values
 
     @return:         		new state values of the given policy
@@ -142,6 +146,9 @@ print(np.round(state_values.reshape(4,4), 3))
 print("NOTICE: state values are higher as you get closer to the goal.")
 ```
 
+**OUTPUT**
+
+
     ****** Intial policy ******
     [[0.25 0.25 0.25 0.25]
      [0.25 0.25 0.25 0.25]
@@ -174,3 +181,4 @@ print("NOTICE: state values are higher as you get closer to the goal.")
 
     NOTICE: state values are higher as you get closer to the goal.
 
+In the next article, we will implement the policy iteration algorithm which will help us find an optimal policy.
