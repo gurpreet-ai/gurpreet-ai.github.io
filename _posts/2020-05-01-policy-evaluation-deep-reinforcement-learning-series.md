@@ -6,9 +6,11 @@ date:   2020-05-01 12:00:00
 
 ## Article Goal
 
-In this article, our goal will be to implement our first reinforcement learning algorithm called **Iterative Policy Evaluation**. This algorithm uses the dynamic programming approach. 
+In this article, our goal will be to implement our first reinforcement learning algorithm called **Iterative Policy Evaluation**. This algorithm uses the dynamic programming approach.
 
-As the name implies, this is a **iterative algorithm** used to evaluate a given policy, **estimate state value** for all the states in the environment, and it will **output the best state-value function**, $$V^{\pi}$$, for the policy. The best value function will give most reward.
+Our goal in RL is find an optimal policy that an agent can follow to complete some task correctly or efficiently. We start with some random policy and we will improve the policy by applying some algorithm. However, to improve the policy we need to be able to measure it. This is where the **Iterative Policy Evaluation** comes into play.
+
+As the name implies, this is a **iterative algorithm** used to evaluate a given policy. It does this by **estimating the state value** for all the states in the environment, and it will **output the state-value function**, $$V^{\pi}$$.
 
 ## 1. Iterative Policy Evaluation Algorithm
 
@@ -98,7 +100,7 @@ def policy_evaluation(env, policy, gamma, theta, state_values):
     @param env:       		OpenAI Gym environment
     @param policy:    		policy matrix containing actions and their probability in each state
     @param gamma:     		discount factor
-    @param theta: 		    evaluation will stop once values for all states are less than theta
+    @param theta: 			evaluation will stop once values for all states are less than theta
     @param state_values: 	initial state values
 
     @return:         		new state values of the given policy
