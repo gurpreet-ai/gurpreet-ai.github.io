@@ -7,7 +7,7 @@ date:   2020-05-06 12:00:00
 
 ## Article Goal
 
-In this last article, we implemented the iterative policy evaluation algorithm to evaluate a policy. In this article, our goal will be to implement an algorithm called **Policy Iteration algorithm** which will help us improve a policy. Policy Iteration algorithm use a dynamic programming (DP) approach where we have complete knowledge of the environment or all the MDP variables.
+In this last article, we implemented the iterative policy evaluation algorithm to evaluate a policy. In this article, our goal will be to implement an algorithm called **Policy Iteration algorithm** which will help us improve a policy and find optimal policy which will get the most reward. Policy Iteration algorithm use a dynamic programming (DP) approach where we have complete knowledge of the environment or all the MDP variables.
 
 ## 1. Policy Iteration
 

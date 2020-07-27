@@ -16,7 +16,7 @@ Before we dive into deep reinforcement learning, we should learn about the diffe
 
 ## 1. Dynamic Programming or DP Methods
 
-If we have complete knowledge of the environment or all the MDP variables $$(S, A, P(s_{t+1} \vert s, a), R(s, a, s_{t+1}), \gamma)$$, following Bellman equations, we can use DP to iteratively evaluate value functions and improve policy. DP methods are known as model-based methods because we have complete knowledge of the environment. We will talk about policy iteration and the value iteration DP algorithm in the next article.
+If we have complete knowledge of the environment or all the MDP variables $$(S, A, P(s_{t+1} \vert s, a), R(s, a, s_{t+1}), \gamma)$$, following Bellman equations, we can use DP to iteratively evaluate value functions and improve policy. DP methods are known as model-based methods because we have complete knowledge of the environment. This is a weakness of dynamic programming because we may not always have complete knowledge of the env. Another weakness is that we have to store backup of all states which is computationally intractive.
 
 ## 2. Monte Carlo or MC Methods
 
