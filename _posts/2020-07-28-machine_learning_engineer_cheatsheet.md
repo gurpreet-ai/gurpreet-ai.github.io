@@ -1,46 +1,75 @@
 ---
 layout: post
-title:  "Machine Learning Cheatsheet"
+title:  "Machine Learning Engineer Cheatsheet"
 date:   2020-07-28 12:00:00
 ---
 
 
 ## Goal
 
-The goal of this cheatsheet is to briefly summarize machine learning algorithms, advantages, and use cases. I want to reference the original Machine Learning Cheatsheet written by Remi Canard. Thank you Remi.
+The goal of this cheatsheet is to briefly summarize machine learning concepts and algorithms. Thank you to the following sources:
+- Data Science Cheatsheet Compiled by Maverick Lin
+- Machine Learning Cheatsheet by Rémi Canard.
+- Super VIP Cheatsheet: Machine Learning by Afshine Amidi and Shervine Amidi
+
+
+## Motivation
+
+Robotics.
 
 ## Topics
 
+- History
  - General
 	 - Definition of Machine Learning
 	 - Linear vs Non-linear Algorithms
-	 - Supervised vs Unsupervised Learning
+	 - Supervised vs Unsupervised vs Semi-Supervised Learning
 	 - Bias-Variance trade-off
 	 - Underfitting and Overfitting
 - Optimization
 	- Gradient Descent
+- Supervised Learning
+- Unsupervised Learning
+
+## History
+
+- Samuel's Checker Player (1952)
+- Perceptron (1957)
+- AI Winter: Minsky & Papert "killed" AI (1969)
+- TD-Gammon (1994)
+- Deep Blue (1997)
+- Tom Michel (1999) "A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with experience E."
 
 ## General
 
 **Definition**
 
+*What is Machine Learning?* Algorithms that improve on some task with experience. Based on Statistics and Optimization, not logic.
+
 We want to learn a target function $$f$$ that maps input variable $$X$$ to output variable $$Y$$, with an error $$e$$:
 
 $$Y = f(X) + e$$
 
-**Linear vs Non-linear Algorithms**
+**Linear vs Non-linear Models**
 
-Any algorithm can be linear (or parametric) or non-linear (or non-parametric). Linear algorithms are usually simpler, faster, and require less data whereas non-linear algorithm are more flexible, more powerful (they can represent a larger class of functions), and more performant but much harder to train.
+Linear models are usually simpler, faster, and require less data whereas non-linear algorithm are more flexible, more powerful (they can represent a larger class of functions), and more performant but much harder to train.
 
- - **Linear (or parametric)**: simplify the mapping to a known linear combination form and learning its coefficients
- - **Non-linear (or non-parametric)**: free to learn any functional form from the training data, while maintaining some ability to generalize.
+ - **Linear (or parametric)**: models that first make an assumption about a function form, or shape, of $$f$$ (linear). Then fits the model. This reduces estimating $$f$$ to just estimating set of parameters, but if our assumption was wrong, will lead to bad results.
+ - **Non-linear (or non-parametric)**: models that don’t make any assumptions about $$f$$, which allows them to fit a wider range of shapes; but may lead to overfitting
 
-**Supervised vs Unsupervised Learning**
+**Supervised vs Unsupervised vs Semi-Supervised Learning**
 
 - **Supervised learning** methods learn to predict Y from X given that the data is labeled.
-- **Unsupervised learning** methods learn	to find the inherent structure of the unlabeled data.
+- **Unsupervised learning** where all data is unlabeled and the algorithms learn to inherent structure from the input data.
+- **Semi-Supervised Learning** methods have some data labeled but most of it is unlabeled.
 
 ![enter image description here](https://4.bp.blogspot.com/-mC4Sn0NKt0k/XyBRb-5PUYI/AAAAAAAAJpY/c2p7dv0k3CUprTpu73oDYl6G12QsZAIHACLcBGAsYHQ/s1600/supervised.jpg)
+
+**Feature engineering**
+
+The process of using domain knowledge to create features or input variables that help machine learning algorithms perform better. Done correctly, it can help increase the predictive power of your models. Feature engineering is more of an art than science. FE is one of the most important steps in creating a good model. 
+
+As Andrew Ng puts it: "Coming up with features is difficult, time-consuming, requires expert knowledge. ‘Applied machine learning’ is basically feature engineering."
 
 **Bias-Variance trade-off**
 
@@ -81,7 +110,6 @@ Gradient Descent is the most common optimization algorithm. It is a first-order 
 
 - Initialization coefficients $$\theta = 0$$ or random value
 - Pick a value for the learning rate $$\alpha$$. If $$\alpha$$ is very small, it would take long time to converge and become computationally expensive. If $$\alpha$$ is large, it may fail to converge and overshoot the minimum. The most commonly used rates are : $$0.001, 0.003, 0.01, 0.03, 0.1, 0.3$$.
-- 
 - Calculate cost: $$J(\theta)=evaluate(f(coefficients))$$
 - Gradient of the cost: $$\frac{\delta}{\delta\theta_J}J(\theta)$$
 - Update coefficients: $$\theta_j =\theta_j - \alpha \frac{\delta}{\delta\theta_J}J(\theta)$$
@@ -93,31 +121,53 @@ The cost updating process is repeated until convergence or until minimum is foun
 **Maximum Likelihood Estimation**
 
 
-## Linear Algorithms
+# Supervised Learning
 
-All linear algorithms assume a linear relationship between the input variables $$X$$ and the output variable $$Y$$.
+Given a set of data points $$[ x (1), ..., x(m) ]$$ associated to a set of outcomes $$[y (1), ..., y(m)]$$, we would like to learn a function $$h$$ such that for a new pair belonging to some distribution $$(x,y)∼P$$, we have $$h(x)=y$$ with high probability (or $$h(x)≈y$$).
 
-**Linear Regression**
+## Types of Prediction
 
-**Logistic Regression**
+|  |  |
+|--|--|
+| Binary classification | *Eg.* spam filtering. An email is either spam (+1), or not (−1). |
+| Multi-class classification | *Eg.* face classification. A person can be exactly one of K identities (e.g., 1="Barack Obama", 2="George W. Bush", etc.). |
+| Regression | *Eg.* predict future temperature or the height of a person. |
 
-**PCA**
+## Hypothesis
 
-**LDA**
+Before we can find a function $$h$$, we must specify what type of function it is that we are looking for. It could be an artificial neural network, a decision tree or many other types of classifiers. 
 
-## Non-Linear Algorithms
+**No Free Lunch Theorem** No single machine learning algorithm is better than all the others on all problems. It is common to try multiple models and find one that works best for a particular problem.
 
-**Classification and Regression Trees**
+## Loss Function
 
-**Naive Bayes Classifier**
+A loss function evaluates a hypothesis $$h ∈ H$$ on our training data and tells us how bad it is. The higher the loss, the worse it is - a loss of zero means it makes perfect predictions.
 
-**K-Nearest Neighbors**
+-   Regression Loss Functions
+    -   Mean Squared Error Loss (**L2 Loss**)
+    -   Mean Absolute Error Loss (**L1 Loss**)
+    -   Huber Loss
+-   Binary Classification Loss Functions
+    -   Binary Cross-Entropy (**Log Loss**)
+    -   Hinge Loss
+-   Multi-class Classification Loss Functions
+    -   Multi-class Cross Entropy Loss
+    -   Kullback Leibler Divergence Loss
 
-**SVM**
+## Cost Function
 
-## Ensemble Algorithms
+The cost function $$J$$ is commonly used to assess the performance of a model, and is defined with the loss function L as follows:
 
-**Bagging and Random Forest**
 
-**Boosting and AdaBoost**
+
+
+# Modeling - Evaluation Metrics
+
+To determine how good our model is, best way to assess is to use data points your model has never seen. 
+
+## Regression Task
+
+
+
+## Classification Task
 
