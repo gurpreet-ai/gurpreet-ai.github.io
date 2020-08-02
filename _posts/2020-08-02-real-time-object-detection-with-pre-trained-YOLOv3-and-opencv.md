@@ -9,20 +9,20 @@ date:   2020-08-01 12:00:00
 In this article, we will perform real-time object detection with YOLOv3 (You Only Look Once) which is the current state of the art, real time object detection system. I want to reference .
 
 ## Topics
-1. How YOLO works?(How YOLO works?)
-2. What YOLO can detect.
-3. Concept of Transfer Learning
-4. How to install YOLO?
-5. Code
-6. Output
+1. [How YOLO works](#how-yolo-works)
+2. [What YOLO can detect](#what-YOLO-can-detect)
+3. [Concept of Transfer Learning](#concept-of-transfer-learning)
+4. [How to install YOLO](#how-to-install-yolo)
+5. [Code](#code)
+6. [Output](#output)
 
-## How YOLO works?
+## How YOLO works
 
 Traditional, R-CNN family of algorithms uses regions to localize the objects in images. High scoring regions of the image are considered as object detected.
 
 YOLO follows a completely different approach. It applies a neural network to the entire image to predict bounding boxes and probability of being some object. High probabilities of the image are considered as object detected.
 
-## What YOLO can detect.
+## What YOLO can detect
 
 YOLO can be applied to:
 1. Image File
@@ -41,7 +41,8 @@ Transfer learning is a technique to reuse the weights in one or more layers from
 2. Fine tuning the weights
 3. Adapting the weights entirely when training a new model
 
-## How to install YOLO?
+
+## How to install YOLO
 
 1. Create a folder. I will name my folder Object-Detection-YOLOv3.
 2. Download weight file and configuration file based on the frames per second (FPS) or mean Average Precision (mAP) from [pjreddie](https://pjreddie.com/darknet/yolo/) and place it in the Object-Detection-YOLOv3 folder.
@@ -52,8 +53,6 @@ Transfer learning is a technique to reuse the weights in one or more layers from
 4. Install OpenCV 3.4.2 or above `pip install opencv-python`
 
 ## Code
-
-
 
 ```python
 import cv2
