@@ -24,12 +24,23 @@ Robotics.
 	 - Definition of Machine Learning
 	 - Linear vs Non-linear Algorithms
 	 - Supervised vs Unsupervised vs Semi-Supervised Learning
+	 - Feature Engineering
 	 - Bias-Variance trade-off
 	 - Underfitting and Overfitting
 - Optimization
 	- Gradient Descent
 - Supervised Learning
+	- Linear Regression
+	- Logistic Regression
+	- Linear Discriminant Analysis
 - Unsupervised Learning
+	- Decision Trees
+	- Naive Bayes Classifier
+	- K-nearest Neighbors
+	- Support Vector Machines
+- Ensemble Algorithms
+	- Bagging and Random Forrest
+	- Boosting and AdaBoost
 
 ## History
 
@@ -65,7 +76,7 @@ Linear models are usually simpler, faster, and require less data whereas non-lin
 
 ![enter image description here](https://4.bp.blogspot.com/-mC4Sn0NKt0k/XyBRb-5PUYI/AAAAAAAAJpY/c2p7dv0k3CUprTpu73oDYl6G12QsZAIHACLcBGAsYHQ/s1600/supervised.jpg)
 
-**Feature engineering**
+**Feature Engineering**
 
 The process of using domain knowledge to create features or input variables that help machine learning algorithms perform better. Done correctly, it can help increase the predictive power of your models. Feature engineering is more of an art than science. FE is one of the most important steps in creating a good model. 
 
@@ -167,7 +178,7 @@ To determine how good our model is, best way to assess is to use data points you
 
 ## Regression Task
 
-
+Errors are defined as the difference between a prediction $$y'$$ and the actual result $$y$$.
 
 ## Classification Task
 
