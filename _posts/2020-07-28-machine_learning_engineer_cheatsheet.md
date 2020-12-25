@@ -19,19 +19,20 @@ Robotics.
 
 ## Topics
 
-- History
- - General
-	 - Definition of Machine Learning
-	 - Linear vs Non-linear Algorithms
-	 - Supervised vs Unsupervised vs Semi-Supervised Learning
-	 - Feature Engineering
-	 - Bias-Variance trade-off
-	 - Underfitting and Overfitting
+- [History](#history)
+- [General](#general)
+	- Definition of Machine Learning
+	- Linear vs Non-linear Algorithms
+	- Supervised vs Unsupervised vs Semi-Supervised Learning
+	- Feature Engineering
+	- Bias-Variance trade-off
+	- Underfitting and Overfitting
 - Optimization
 	- Gradient Descent
 - Supervised Learning
 	- Linear Regression
 	- Logistic Regression
+	- K-Nearest Neighbors Algorithm
 	- Linear Discriminant Analysis
 - Unsupervised Learning
 	- Decision Trees
@@ -53,11 +54,13 @@ Robotics.
 
 ## General
 
-**Definition**
+**Definition of Machine Learning**
 
 *What is Machine Learning?* Algorithms that improve on some task with experience. Based on Statistics and Optimization, not logic.
 
-We want to learn a target function $$f$$ that maps input variable $$X$$ to output variable $$Y$$, with an error $$e$$:
+Arthur Samuel, a pioneer in Artificial Intelligence defined Machine Learning in 1959 as “Field of study that gives computers the capability to learn without being explicitly programmed”
+
+You can think of it mathamatically as: we want to learn a target function $$f$$ that maps input variable $$X$$ to output variable $$Y$$, with an error $$e$$:
 
 $$Y = f(X) + e$$
 
@@ -168,9 +171,6 @@ A loss function evaluates a hypothesis $$h ∈ H$$ on our training data and tell
 ## Cost Function
 
 The cost function $$J$$ is commonly used to assess the performance of a model, and is defined with the loss function L as follows:
-
-
-
 
 # Modeling - Evaluation Metrics
 
