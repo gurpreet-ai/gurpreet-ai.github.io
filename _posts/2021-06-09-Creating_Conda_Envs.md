@@ -1,3 +1,8 @@
+---
+layout: post
+title:  "Creating Conda Environment"
+date:   2021-06-09 12:00:00
+---
 
 Here are the steps:
 
