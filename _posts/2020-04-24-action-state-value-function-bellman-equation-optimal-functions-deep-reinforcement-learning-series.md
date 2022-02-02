@@ -143,7 +143,7 @@ $$\mathop{\mathbb{E}}_{\pi} [\gamma \ \Sigma_{k=0}^{\infty}{\gamma^{k}r_{t+k+2}}
 
 The first expectation:
 
-$$\mathop{\mathbb{E}}_{\pi} [r_{t+1} \ \vert \ S_t = s, A_t = a]  = \Sigma_{s'} \ p(s', r, \ \vert \ s, a) \ r(s, a, s') \ $$
+$$\mathop{\mathbb{E}}_{\pi} [r_{t+1} \ \vert \ S_t = s, A_t = a]  = \Sigma_{s'} \ p(s', r, \ \vert \ s, a) \ r(s, a, s')$$
 
 The second expectation:
 
